@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f2f2f7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Rutas">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPgo8ZGVmcz4KPGxpbmVhckdyYWRpZW50IGlkPSJiZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMC4zNSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI0ZGQjEzQiIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI0ZGNUUwMCIvPjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0ic2giIHgxPSIwIiB5MT0iMCIgeDI9IjAiIHkyPSIxIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iLjIiLz48c3RvcCBvZmZzZXQ9Ii41NSIgc3RvcC1jb2xvcj0iI2ZmZiIgc3RvcC1vcGFjaXR5PSIwIi8+PC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMDI0IiByeD0iMjI4IiBmaWxsPSJ1cmwoI2JnKSIvPgo8cmVjdCB3aWR0aD0iMTAyNCIgaGVpZ2h0PSIxMDI0IiByeD0iMjI4IiBmaWxsPSJ1cmwoI3NoKSIvPgo8cGF0aCBkPSJNNDYyIDU5MCBDIDQzMCA1MjAgNDAwIDQ3MCAzMDAgNDAwIiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1vcGFjaXR5PSIuNDUiIHN0cm9rZS13aWR0aD0iNDQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWRhc2hhcnJheT0iMC4xIDcyIiBzdHJva2UtZGFzaG9mZnNldD0iLTcyIi8+CjxwYXRoIGQ9Ik0yODAgODAwIEMgMjgwIDY2MCA0NTAgNjkwIDQ2MiA1OTAgQyA0NzQgNTAwIDYxMCA1NjAgNzAwIDU0OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjY0IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPGNpcmNsZSBjeD0iMjgwIiBjeT0iODAwIiByPSI1NiIgZmlsbD0iI2ZmZiIvPgo8Y2lyY2xlIGN4PSIyODAiIGN5PSI4MDAiIHI9IjIyIiBmaWxsPSIjRkY3NDAwIi8+CjxwYXRoIGQ9Ik03MzYgMTUwIGMtODIgMCAtMTQyIDYyIC0xNDIgMTQwIGMwIDk4IDE0MiAyMDAgMTQyIDIwMCBzMTQyIC0xMDIgMTQyIC0yMDAgYzAgLTc4IC02MCAtMTQwIC0xNDIgLTE0MHoiIGZpbGw9IiNmZmYiLz4KPGNpcmNsZSBjeD0iNzM2IiBjeT0iMjkwIiByPSI1MCIgZmlsbD0iI0ZGNkEwMCIvPgo8L3N2Zz4K">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>body{margin:0}</style>
+</head>
+<body>
+<title>Rutas Running Valencia</title>
+<style>
+/* Layout: navegación estilo iOS en tres pantallas — Inicio (dashboard en rejilla bento con lo esencial), Rutas (lista completa con filtros y fichas) y Mapa (mapa a pantalla completa con tarjeta flotante) */
+:root{
+  --bg:#f2f2f7; --surface:#ffffff; --fill:#e9e9ee; --label:#1c1c1e; --label-2:#6c6c72; --label-3:#aeaeb2;
+  --sep:rgba(60,60,67,.14); --tint:#007aff; --tint-soft:rgba(0,122,255,.1);
+  --green:#34c759; --orange:#ff9500; --red:#ff3b30;
+  --z-val:#ff9500; --z-alr:#34c759; --z-che:#5856d6; --z-seg:#30b0c7;
+  --land:#f5f3ee; --land-line:#e3dfd6; --city:#ebe7df; --sea:#aad3f2; --map-label:#6e6a62; --park:#d7ecc9; --park-strong:#9fd38a; --park-label:#4f8a3c; --river:#8fc7ee; --water-line:#93c4e8; --water-label:#4b8fc4; --road:#ffffff; --road-case:#e0d9c8;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 6px 20px -10px rgba(0,0,0,.14);
+  --font:-apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
+  --font-d:-apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#000000; --surface:#1c1c1e; --fill:#2c2c2e; --label:#ffffff; --label-2:#98989f; --label-3:#5a5a5f;
+  --sep:rgba(84,84,88,.6); --tint:#0a84ff; --tint-soft:rgba(10,132,255,.18);
+  --green:#30d158; --orange:#ff9f0a; --red:#ff453a;
+  --z-val:#ff9f0a; --z-alr:#30d158; --z-che:#7d7aff; --z-seg:#40c8e0;
+  --land:#2c2c2e; --land-line:#3a3a3d; --city:#353538; --sea:#16283a; --map-label:#a1a1a6; --park:#253626; --park-strong:#2f5a30; --park-label:#7fb877; --river:#25496a; --water-line:#24425e; --water-label:#6aa6d8; --road:#4a4a4e; --road-case:#3a3a3d;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px -10px rgba(0,0,0,.7); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#000000; --surface:#1c1c1e; --fill:#2c2c2e; --label:#ffffff; --label-2:#98989f; --label-3:#5a5a5f;
+  --sep:rgba(84,84,88,.6); --tint:#0a84ff; --tint-soft:rgba(10,132,255,.18);
+  --green:#30d158; --orange:#ff9f0a; --red:#ff453a;
+  --z-val:#ff9f0a; --z-alr:#30d158; --z-che:#7d7aff; --z-seg:#40c8e0;
+  --land:#2c2c2e; --land-line:#3a3a3d; --city:#353538; --sea:#16283a; --map-label:#a1a1a6; --park:#253626; --park-strong:#2f5a30; --park-label:#7fb877; --river:#25496a; --water-line:#24425e; --water-label:#6aa6d8; --road:#4a4a4e; --road-case:#3a3a3d;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px -10px rgba(0,0,0,.7); color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{background:var(--bg)}
+body{color:var(--label);font-family:var(--font);font-size:15px;line-height:1.45;-webkit-font-smoothing:antialiased;letter-spacing:-.01em}
+button,input,select{font:inherit;color:inherit}
+:is(button,a,input,select):focus-visible{outline:3px solid var(--tint);outline-offset:2px}
+svg.i{width:18px;height:18px;flex:none;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.app{max-width:1120px;margin:0 auto;padding-inline:16px;padding-block:14px 48px}
+.view{display:grid;gap:18px}
+
+/* Nav */
+.nav{display:flex;align-items:center;justify-content:space-between;min-height:36px}
+.back{display:inline-flex;align-items:center;gap:2px;border:0;background:none;color:var(--tint);font-size:17px;cursor:pointer;padding:4px 6px 4px 0}
+.back svg{width:22px;height:22px;stroke-width:2.4}
+.brand{display:flex;align-items:center;gap:14px}.applogo{width:60px;height:60px;flex:none;filter:drop-shadow(0 4px 10px rgba(255,94,0,.25))}@media (max-width:520px){.applogo{width:48px;height:48px}}
+.ttl small{display:block;font-size:13px;font-weight:600;color:var(--label-2);text-transform:uppercase;letter-spacing:.02em}
+.ttl h1{margin:0;font:700 34px/1.12 var(--font-d);letter-spacing:-.025em}
+.hrow{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+
+/* Common */
+.pill{display:inline-flex;align-items:center;justify-content:center;gap:7px;border:0;border-radius:999px;padding:9px 15px;font-weight:600;font-size:15px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.pill.tint{background:var(--tint);color:#fff}
+.pill.soft{background:var(--tint-soft);color:var(--tint)}
+.pill.gray{background:var(--fill);color:var(--label)}
+.pill.block{width:100%;border-radius:12px;padding:12px 16px}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;background:var(--fill);border-radius:10px;padding:2px;gap:2px}
+.seg button{border:0;background:transparent;border-radius:8px;padding:7px 4px;font-size:13px;font-weight:500;cursor:pointer;white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--surface);box-shadow:0 1px 3px rgba(0,0,0,.12);font-weight:600}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .seg button[aria-pressed="true"]{background:#636366}}
+:root[data-theme="dark"] .seg button[aria-pressed="true"]{background:#636366}
+.search{display:flex;align-items:center;gap:8px;background:var(--fill);border-radius:12px;padding:0 6px 0 12px;color:var(--label-2)}
+.search input{flex:1;min-width:0;border:0;background:transparent;padding:10px 0;font-size:16px;color:var(--label);outline:none}
+.search input::placeholder{color:var(--label-2)}
+.search button{border:0;background:transparent;color:var(--tint);font-weight:600;padding:8px;cursor:pointer}
+.linkbtn{border:0;background:none;color:var(--tint);font-weight:500;font-size:15px;cursor:pointer;padding:0;display:inline-flex;align-items:center;gap:6px}
+.msg{margin:0;font-size:13px;color:var(--label-2)}
+.msg.err{color:var(--red)}
+.ic{position:relative;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;color:#fff;flex:none}
+.ic svg{width:18px;height:18px}
+.ic .ok{position:absolute;right:-3px;bottom:-3px;width:16px;height:16px;border-radius:50%;background:var(--green);border:2px solid var(--surface);display:grid;place-items:center}
+.ic .ok svg{width:9px;height:9px;stroke-width:3.5}
+
+/* Dashboard bento */
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+@media (max-width:900px){.bento{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tile{background:var(--surface);border-radius:20px;padding:16px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px;min-width:0}
+.s2{grid-column:span 2}.s4{grid-column:span 4}.r2{grid-row:span 2}
+@media (max-width:900px){.s4{grid-column:span 2}}
+@media (max-width:560px){.bento .s2:not(.keep){grid-column:span 2}}
+.th{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.th h3{margin:0;font-size:13px;font-weight:600;color:var(--label-2);text-transform:uppercase;letter-spacing:.03em;display:flex;align-items:center;gap:6px}
+.th h3 svg{width:15px;height:15px}
+.more{border:0;background:none;color:var(--tint);font-size:14px;font-weight:500;cursor:pointer;display:inline-flex;align-items:center;gap:2px;padding:0;white-space:nowrap}
+.more svg{width:14px;height:14px}
+.big{font:700 34px/1 var(--font-d);letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.big span{font-size:15px;font-weight:600;color:var(--label-2);letter-spacing:0}
+.sub2{font-size:13px;color:var(--label-2);margin:0}
+
+.origin-name{font:700 26px/1.1 var(--font-d);letter-spacing:-.02em}
+.oactions{display:flex;gap:18px;flex-wrap:wrap}
+
+.sugg{background:linear-gradient(160deg,color-mix(in srgb,var(--tint) 14%,var(--surface)),var(--surface) 60%)}
+.sugg h2{margin:0;font:700 22px/1.2 var(--font-d);letter-spacing:-.02em;text-wrap:balance}
+.chipsrow{display:flex;flex-wrap:wrap;gap:6px}
+.mchip{font-size:13px;font-weight:600;background:var(--fill);border-radius:8px;padding:4px 9px;font-variant-numeric:tabular-nums}
+.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:auto}
+.btnrow .pill{flex:1}
+
+.ringwrap{display:flex;align-items:center;gap:14px}
+.ring{width:72px;height:72px;flex:none}
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;font-size:13px}
+.bar .tr{height:6px;border-radius:3px;background:var(--fill);overflow:hidden}
+.bar .tr i{display:block;height:100%;border-radius:3px}
+.bar b{font-variant-numeric:tabular-nums;font-weight:600}
+
+.mini{position:relative;border-radius:14px;overflow:hidden;flex:1;min-height:220px;background:var(--sea);cursor:pointer}
+.mini svg{position:absolute;inset:0;width:100%;height:100%}
+
+.zlist{display:grid;gap:2px}
+.zrow{display:flex;align-items:center;gap:12px;border:0;background:none;padding:9px 4px;border-radius:10px;cursor:pointer;text-align:left;width:100%}
+.zrow:hover{background:var(--bg)}
+.zrow .zi{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;color:#fff;flex:none;font-weight:700;font-size:14px}
+.zrow .t{flex:1;min-width:0}
+.zrow b{display:block;font-size:15px;font-weight:600}
+.zrow small{display:block;font-size:12px;color:var(--label-2)}
+.chev{color:var(--label-3);width:14px;height:14px}
+
+/* Lists */
+.card{background:var(--surface);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+.list{list-style:none;margin:0;padding:0}
+.row+.row::before{content:"";display:block;height:1px;background:var(--sep);margin-left:62px}
+.rowbtn{width:100%;display:flex;align-items:center;gap:12px;border:0;background:transparent;padding:12px 14px;text-align:left;cursor:pointer}
+.tile .rowbtn{padding:10px 0}
+.tile .row+.row::before{margin-left:48px}
+.rt{flex:1;min-width:0}
+.rt b{display:block;font-size:16px;font-weight:600;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rt small{display:block;font-size:13px;color:var(--label-2);margin-top:2px;font-variant-numeric:tabular-nums}
+.trail{text-align:right;flex:none;font-variant-numeric:tabular-nums}
+.trail b{display:block;font-size:15px;font-weight:600}
+.trail small{font-size:12px;color:var(--label-2)}
+.rowbtn .chev{transition:transform .2s}
+.rowbtn[aria-expanded="true"] .chev{transform:rotate(90deg)}
+.detail{padding:2px 14px 16px 62px;display:grid;gap:14px}
+@media (max-width:460px){.detail{padding-left:14px}}
+.place{font-size:13px;color:var(--label-2);display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+.badge{font-size:12px;font-weight:600;border-radius:6px;padding:2px 7px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat{background:var(--bg);border-radius:12px;padding:10px 12px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .stat{background:var(--fill)}}
+:root[data-theme="dark"] .stat{background:var(--fill)}
+.stat small{display:block;font-size:11px;font-weight:600;color:var(--label-2);text-transform:uppercase;letter-spacing:.03em}
+.stat b{display:flex;align-items:baseline;gap:3px;font:700 20px/1.2 var(--font-d);font-variant-numeric:tabular-nums;letter-spacing:-.02em;margin-top:2px}
+.stat b span{font-size:13px;font-weight:600;color:var(--label-2)}
+.desc{margin:0;font-size:15px}
+.tip{margin:0;font-size:14px;color:var(--label-2);display:flex;gap:8px}
+.tip svg{color:var(--orange);width:16px;height:16px;margin-top:2px}
+.acts2{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.acts2 .pill{flex-direction:column;gap:3px;padding:10px 4px;font-size:12px;border-radius:12px}
+.acts2 .pill.done-on{background:var(--green);color:#fff}
+.src{font-size:12px;color:var(--label-3)}
+.empty{padding:28px 16px;text-align:center;color:var(--label-2)}
+
+.filterbar{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 4px;scrollbar-width:none}
+.filterbar::-webkit-scrollbar{display:none}
+.selpill{position:relative;flex:none}
+.selpill select{appearance:none;-webkit-appearance:none;border:0;background:var(--surface);border-radius:999px;padding:8px 32px 8px 14px;font-size:14px;font-weight:500;cursor:pointer;box-shadow:0 0 0 1px var(--sep)}
+.selpill.on select{background:var(--label);color:var(--surface);box-shadow:none}
+.selpill svg{position:absolute;right:11px;top:50%;width:12px;height:12px;transform:translateY(-50%);pointer-events:none}
+.tpill{flex:none;border:0;background:var(--surface);border-radius:999px;padding:8px 14px;font-size:14px;font-weight:500;cursor:pointer;box-shadow:0 0 0 1px var(--sep);white-space:nowrap}
+.tpill[aria-pressed="true"]{background:var(--label);color:var(--surface);box-shadow:none}
+.listwrap{max-width:760px;width:100%;margin:0 auto;display:grid;gap:14px}
+.lh{display:flex;justify-content:space-between;align-items:baseline;padding:0 4px}
+.lh b{font-size:15px}.lh span{font-size:13px;color:var(--label-2)}
+.foot{font-size:12px;color:var(--label-2);padding:0 4px;margin:0}
+
+/* Full map */
+.mapcard{position:relative;height:calc(100dvh - 130px);min-height:440px;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);background:var(--sea)}
+#map{width:100%;height:100%;display:block;touch-action:none;cursor:grab;user-select:none;-webkit-user-select:none}
+#map.drag{cursor:grabbing}#map.pickmode{cursor:crosshair}
+.glass{background:color-mix(in srgb,var(--surface) 82%,transparent);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);box-shadow:0 2px 10px rgba(0,0,0,.12);border-radius:12px}
+.mapctl{position:absolute;right:12px;top:12px;display:grid;gap:8px}
+.zoom{display:grid;overflow:hidden}
+.zoom button,.fitbtn{width:40px;height:40px;border:0;background:transparent;cursor:pointer;display:grid;place-items:center}
+.zoom button+button{border-top:1px solid var(--sep)}
+.legend{position:absolute;left:12px;top:12px;padding:7px 11px;display:flex;flex-wrap:wrap;gap:3px 12px;font-size:12px;font-weight:500;max-width:calc(100% - 80px)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:9px;height:9px;border-radius:50%}
+.pickhint{position:absolute;left:50%;bottom:16px;transform:translateX(-50%);padding:9px 14px;font-size:13px;font-weight:600;white-space:nowrap}
+.sheet{position:absolute;left:12px;right:12px;bottom:12px;max-width:420px;padding:14px;border-radius:18px;display:grid;gap:12px}
+.sheet .top{display:flex;gap:12px;align-items:center}
+.sheet .x{border:0;background:var(--fill);width:30px;height:30px;border-radius:50%;cursor:pointer;display:grid;place-items:center;color:var(--label-2);flex:none}
+.sheet .x svg{width:14px;height:14px;stroke-width:3}
+.sheet .btnrow{flex-wrap:nowrap}.sheet .btnrow .pill{padding:10px 12px;font-size:14px;min-width:0}.sheet .top .rt{min-width:0}
+@media (prefers-reduced-motion:no-preference){.view{animation:fade .22s ease-out}@keyframes fade{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}}
+@media (max-width:520px){.legend{font-size:11px}.ttl h1{font-size:30px}}
+</style>
+
+<div class="app">
+  <!-- ================= INICIO ================= -->
+  <section class="view" id="v-home">
+    <div class="hrow">
+      <div class="brand"><svg class="applogo" viewBox="0 0 1024 1024" aria-hidden="true">
+<defs>
+<linearGradient id="lg-bg" x1="0" y1="0" x2="0.35" y2="1"><stop offset="0" stop-color="#FFB13B"/><stop offset="1" stop-color="#FF5E00"/></linearGradient>
+<linearGradient id="lg-sh" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".2"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="1024" height="1024" rx="228" fill="url(#lg-bg)"/>
+<rect width="1024" height="1024" rx="228" fill="url(#lg-sh)"/>
+<path d="M462 590 C 430 520 400 470 300 400" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="44" stroke-linecap="round" stroke-dasharray="0.1 72" stroke-dashoffset="-72"/>
+<path d="M280 800 C 280 660 450 690 462 590 C 474 500 610 560 700 548" fill="none" stroke="#fff" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="280" cy="800" r="56" fill="#fff"/>
+<circle cx="280" cy="800" r="22" fill="#FF7400"/>
+<path d="M736 150 c-82 0 -142 62 -142 140 c0 98 142 200 142 200 s142 -102 142 -200 c0 -78 -60 -140 -142 -140z" fill="#fff"/>
+<circle cx="736" cy="290" r="50" fill="#FF6A00"/>
+</svg><div class="ttl"><small>Running · Valencia</small><h1>Hoy no corro por lo mismo</h1></div></div>
+    </div>
+    <div class="bento">
+      <div class="tile s2">
+        <div class="th"><h3>Sales desde</h3><button class="more" data-go="list">Ver rutas<svg class="i chev" viewBox="0 0 24 24" style="color:currentColor"><path d="m9 6 6 6-6 6"/></svg></button></div>
+        <div class="origin-name" id="hereName">Valencia</div>
+        <div class="seg" id="presets"></div>
+        <div class="search">
+          <svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="q" list="places" placeholder="Otro pueblo, barrio o enlace de Maps" autocomplete="off" aria-label="Buscar punto de salida" enterkeyhint="search">
+          <button id="go">Buscar</button>
+        </div>
+        <datalist id="places"></datalist>
+        <div class="oactions">
+          <button class="linkbtn" id="gps"><svg class="i" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>Mi ubicación</button>
+          <button class="linkbtn" id="pickbtn"><svg class="i" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>Elegir en el mapa</button>
+        </div>
+        <p class="msg" id="msg" hidden></p>
+      </div>
+
+      <div class="tile s2 sugg" id="sugg"></div>
+
+      <div class="tile keep">
+        <div class="th"><h3>Progreso</h3></div>
+        <div class="ringwrap"><svg class="ring" viewBox="0 0 72 72" id="ring"></svg>
+          <div><div class="big" id="doneN">0</div><p class="sub2" id="doneOf">de 28 rutas</p></div></div>
+        <p class="sub2" id="doneKm"></p>
+      </div>
+
+      <div class="tile keep">
+        <div class="th"><h3>Cerca de ti</h3></div>
+        <div class="bars" id="near"></div>
+      </div>
+
+      <div class="tile s2 r2">
+        <div class="th"><h3>Mapa</h3><button class="more" data-go="map">Abrir mapa<svg class="i chev" viewBox="0 0 24 24" style="color:currentColor"><path d="m9 6 6 6-6 6"/></svg></button></div>
+        <div class="mini" id="miniwrap" role="button" tabindex="0" aria-label="Abrir mapa"><svg id="mini" aria-hidden="true"></svg></div>
+      </div>
+
+      <div class="tile s2">
+        <div class="th"><h3>Zonas</h3><button class="more" data-go="list">Ver todas<svg class="i chev" viewBox="0 0 24 24" style="color:currentColor"><path d="m9 6 6 6-6 6"/></svg></button></div>
+        <div class="zlist" id="zones"></div>
+      </div>
+
+      <div class="tile s4">
+        <div class="th"><h3>Más cercanas</h3><button class="more" data-go="list" id="allbtn">Ver las 28 rutas<svg class="i chev" viewBox="0 0 24 24" style="color:currentColor"><path d="m9 6 6 6-6 6"/></svg></button></div>
+        <ul class="list" id="closest"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RUTAS ================= -->
+  <section class="view" id="v-list" hidden>
+    <div class="listwrap">
+      <div class="nav"><button class="back" data-go="home"><svg class="i" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg>Inicio</button><button class="linkbtn" data-go="map">Mapa</button></div>
+      <div class="ttl"><small id="listSub">Desde Valencia</small><h1>Rutas</h1></div>
+      <div class="seg" id="f-rad"></div>
+      <div class="filterbar" id="filterbar"></div>
+      <div class="lh"><b id="count"></b><span id="doneCount"></span></div>
+      <div class="card"><ul class="list" id="list"></ul></div>
+      <p class="foot">«Ver en Maps» abre el trayecto a pie por los puntos clave de la ruta; Google elige el camino entre ellos. En rutas de monte se abre la zona con relieve: usa el track para el trazado exacto. Distancias en línea recta desde tu punto; distancias y desniveles de ruta aproximados salvo senderos homologados.</p>
+    </div>
+  </section>
+
+  <!-- ================= MAPA ================= -->
+  <section class="view" id="v-map" hidden>
+    <div class="nav"><button class="back" data-go="home"><svg class="i" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></svg>Inicio</button><button class="linkbtn" data-go="list">Lista</button></div>
+    <div class="mapcard">
+      <svg id="map" role="img" aria-label="Mapa de rutas"></svg>
+      <div class="legend glass" id="legend"></div>
+      <div class="mapctl">
+        <div class="zoom glass"><button id="zin" aria-label="Acercar"><svg class="i" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><button id="zout" aria-label="Alejar"><svg class="i" viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button></div>
+        <button class="fitbtn glass" id="fit" aria-label="Ajustar a las rutas"><svg class="i" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+      </div>
+      <div class="pickhint glass" id="pickhint" hidden>Toca el mapa para elegir el punto de salida</div>
+      <div class="sheet glass" id="sheet" hidden></div>
+    </div>
+  </section>
+</div>
+
+<script>
+const MAP={"W":800,"H":870,"B":{"n":39.97,"s":39.3,"w":-0.98,"e":-0.18},"K":0.7701793827501822,"sc":1298.3988177262895,"land":"M164.0,-161.3L177.5,-165.5L231.5,-232.6L251.8,-222.1L263.0,-222.1L305.7,-205.3L303.5,-180.2L350.7,-171.8L371.0,-201.1L400.2,-217.9L442.9,-196.9L456.4,-201.1L467.7,-182.2L474.4,-173.9L478.9,-178.1L508.2,-169.7L523.9,-152.9L573.4,-150.8L575.6,-136.1L582.4,-138.2L611.6,-136.1L636.4,-146.6L661.1,-169.7L654.4,-190.6L640.9,-215.8L618.4,-228.4L618.4,-264.1L658.9,-287.1L658.9,-310.2L710.6,-293.4L728.6,-303.9L746.6,-329.1L782.6,-268.3L769.1,-243.1L782.6,-226.3L728.6,-201.1L724.1,-186.4L751.1,-176.0L757.8,-192.7L784.8,-205.3L791.5,-182.2L832.0,-152.9L834.3,-163.4L861.3,-169.7L874.8,-136.1L888.3,-148.7L915.3,-144.5L924.2,-157.1L955.7,-155.0L969.2,-165.5L982.7,-129.8L978.2,-123.5L996.2,-71.1L1018.7,-58.5L1005.2,-10.2L982.7,35.9L971.5,77.9L946.7,96.7L913.0,140.8L901.8,140.8L881.5,166.0L856.8,210.0L827.5,260.4L811.8,281.3L807.3,289.7L791.5,321.2L780.3,369.5L775.8,386.2L769.1,411.4L742.1,432.4L721.8,459.7L712.8,482.7L699.3,524.7L694.8,533.1L692.6,537.3L683.6,545.7L681.3,552.0L667.8,570.8L667.8,572.9L665.6,577.1L661.1,591.8L656.6,631.7L661.1,661.0L676.8,661.0L667.8,684.1L656.6,665.2L663.3,709.3L649.9,703.0L647.6,728.2L674.6,824.7L706.1,898.1L735.3,967.3L760.1,1017.7L739.8,1042.8L742.1,1074.3L757.8,1122.5L744.3,1124.6L708.3,1099.5L683.6,1084.8L672.3,1068.0L672.3,1057.5L679.1,1040.7L674.6,1038.6L672.3,1030.2L672.3,1013.5L647.6,1009.3L654.4,1044.9L643.1,1028.1L604.9,1028.1L591.4,1007.2L575.6,1019.7L568.9,1017.7L555.4,1034.4L519.4,1023.9L478.9,1051.2L478.9,1044.9L460.9,1038.6L445.2,1055.4L449.7,1078.5L436.2,1080.6L438.4,1065.9L440.7,1047.0L384.5,1047.0L353.0,1055.4L395.7,1072.2L344.0,1089.0L332.7,1103.7L314.7,1120.4L281.0,1080.6L254.0,1053.3L247.3,1030.2L179.8,1038.6L134.8,1036.5L92.1,1040.7L60.6,1063.8L20.1,1038.6L-0.1,1021.8L-49.6,1034.4L-60.9,1047.0L-216.1,1030.2L-209.3,998.8L-200.3,984.1L-195.8,940.0L-195.8,914.9L-182.3,862.4L-189.1,851.9L-236.3,845.6L-270.0,839.3L-294.8,826.8L-319.5,831.0L-339.8,814.2L-355.5,826.8L-382.5,805.8L-405.0,799.5L-402.7,784.8L-384.7,774.3L-375.7,753.3L-337.5,711.4L-292.5,684.1L-299.3,669.4L-294.8,577.1L-256.5,568.7L-256.5,556.2L-200.3,556.2L-175.6,537.3L-180.1,514.2L-157.6,489.0L-123.8,478.5L-108.1,457.6L-166.6,403.0L-186.8,377.8L-182.3,310.7L-189.1,293.9L-171.1,254.1L-184.6,243.6L-202.6,212.1L-231.8,178.6L-227.3,161.8L-218.3,126.1L-110.3,73.7L-108.1,0.3L-126.1,-6.0L-146.3,8.6L-162.1,-1.8L-184.6,-52.2L-209.3,-110.9L-186.8,-129.8L-168.8,-188.5L-153.1,-165.5L-126.1,-152.9L-103.6,-131.9L-54.1,-144.5L-15.9,-230.5L-27.1,-232.6L-40.6,-270.4L-24.9,-314.4L-36.1,-339.6L-31.6,-431.9L24.6,-471.7L24.6,-496.9L31.3,-499.0L38.1,-452.9L69.6,-429.8L92.1,-398.3L123.6,-383.6L139.3,-350.1L139.3,-327.0L157.3,-310.2L155.0,-289.2L96.6,-274.6L65.1,-251.5L29.1,-203.2L24.6,-186.4L40.3,-138.2L105.6,-165.5L164.0,-161.3Z","mesh":"M598.1,713.5L598.1,713.5M715.1,293.9L715.1,293.9M-69.9,413.5L-69.9,413.5M-76.6,388.3L-76.6,388.3M60.6,193.2L60.6,193.2M640.9,539.4L640.9,539.4M-184.6,-52.2L-155.3,-58.5L-103.6,-85.8L-92.4,-106.7L-103.6,-131.9L-54.1,-144.5L-33.9,-121.4L-31.6,-100.4L-6.9,-66.9L4.4,-8.1L-22.6,-14.4L-45.1,-6.0L-76.6,-14.4L-108.1,0.3L-126.1,-6.0L-146.3,8.6L-162.1,-1.8L-184.6,-52.2M-36.1,-339.6L-31.6,-431.9L24.6,-471.7L24.6,-496.9M123.6,-383.6L139.3,-350.1L139.3,-327.0L157.3,-310.2L155.0,-289.2L96.6,-274.6L65.1,-251.5L29.1,-203.2L24.6,-186.4L40.3,-138.2M13.4,-115.1L-4.6,-127.7L-33.9,-121.4M350.7,-171.8L366.5,-129.8L350.7,-136.1L314.7,-104.6L301.2,-98.3L267.5,-94.1M371.0,814.2L366.5,828.9L299.0,877.1L285.5,849.8L326.0,784.8L337.2,778.5L346.2,761.7L389.0,751.2L442.9,757.5L440.7,791.1L427.2,826.8L398.0,839.3L371.0,814.2L337.2,778.5M454.2,-52.2L492.4,-45.9L496.9,-50.1L512.7,-48.0L532.9,-79.5L535.1,-56.4L557.6,-37.5L557.6,-8.1L528.4,0.3L499.2,-29.1L492.4,-45.9M582.4,-77.4L602.6,-75.3L634.1,-87.9L638.6,-96.2L652.1,-108.8L656.6,-77.4L643.1,-69.0L634.1,-87.9M-402.7,784.8L-384.7,774.3L-375.7,753.3L-337.5,711.4L-292.5,684.1L-299.3,669.4L-294.8,577.1M-256.5,556.2L-200.3,556.2L-175.6,537.3L-180.1,514.2L-157.6,489.0L-123.8,478.5L-108.1,457.6L-87.9,463.9L-33.9,501.6L-2.4,541.5L-0.1,596.0L15.6,642.2L2.1,703.0L4.4,744.9L-4.6,797.4L-2.4,822.6L-15.9,818.4L-49.6,839.3L-78.9,849.8L-112.6,854.0L-112.6,881.3L-139.6,900.2L-195.8,914.9M598.1,96.7L568.9,100.9L559.9,84.2L546.4,88.4L510.4,61.1L546.4,38.0L562.1,44.3L568.9,40.1L584.6,44.3L598.1,54.8L627.4,48.5L649.9,31.7L663.3,46.4L699.3,63.2L697.1,80.0L661.1,88.4L647.6,75.8L602.6,88.4L589.1,67.4L562.1,44.3M661.1,88.4L643.1,124.0L636.4,124.0L611.6,117.7L598.1,96.7L602.6,88.4M784.8,-205.3L791.5,-182.2L832.0,-152.9L814.0,-131.9L825.3,-119.3L823.0,-81.6L818.5,-64.8L807.3,-69.0L773.6,-52.2L746.6,-71.1L692.6,-100.4L688.1,-100.4L674.6,-115.1L721.8,-163.4L744.3,-165.5L751.1,-176.0M791.5,321.2L784.8,319.1L746.6,298.1L719.6,293.9L708.3,285.5L706.1,279.3L703.8,258.3L733.1,249.9L807.3,289.7M971.5,77.9L919.7,48.5L892.8,21.2L859.0,12.8L827.5,-1.8L845.5,-20.7L874.8,-16.5L910.8,14.9L982.7,35.9M611.6,117.7L598.1,121.9L582.4,151.3L559.9,170.2L535.1,115.6L568.9,100.9M474.4,-173.9L478.9,-178.1L508.2,-169.7L523.9,-152.9L519.4,-134.0L487.9,-106.7L476.7,-138.2L451.9,-155.0L474.4,-173.9M638.6,-96.2L611.6,-110.9L611.6,-136.1L636.4,-146.6L661.1,-169.7L656.6,-146.6L670.1,-123.5L652.1,-108.8M694.8,128.2L706.1,96.7L697.1,80.0M699.3,63.2L719.6,56.9L746.6,56.9L782.6,92.6L744.3,140.8L739.8,138.7M557.6,-37.5L577.9,-64.8L609.4,-45.9L634.1,-45.9L638.6,-12.3L613.9,-1.8L589.1,-8.1L568.9,0.3L557.6,-8.1M636.4,124.0L629.6,172.3L649.9,191.1L602.6,197.4L600.4,178.6L582.4,151.3M746.6,56.9L769.1,27.5L805.0,42.2L809.5,96.7L782.6,92.6M978.2,-123.5L962.5,-102.5L940.0,-89.9L935.5,-75.3L904.0,-69.0L859.0,-52.2L823.0,-81.6L854.5,-104.6L872.5,-108.8L915.3,-144.5M924.2,-157.1L955.7,-155.0L969.2,-165.5L982.7,-129.8M881.5,166.0L843.3,134.5L870.3,111.4L883.8,86.3L897.3,63.2L919.7,48.5M634.1,-45.9L643.1,-69.0M670.1,-123.5L674.6,-115.1M688.1,-100.4L681.3,-89.9L694.8,-54.3L699.3,-41.7L667.8,-6.0L658.9,0.3L638.6,-12.3M559.9,170.2L553.1,193.2L535.1,187.0L535.1,170.2L517.2,174.4L514.9,170.2L503.7,117.7L535.1,115.6M845.5,-20.7L820.8,-43.8L818.5,-64.8M314.7,-104.6L359.7,-98.3L371.0,-87.9L398.0,-58.5L454.2,-52.2L447.4,-39.6L469.9,4.4L463.2,14.9L460.9,21.2L427.2,48.5L415.9,48.5M364.2,-62.7L362.0,-81.6L301.2,-98.3M496.9,-50.1L474.4,-77.4L487.9,-106.7M523.9,-152.9L573.4,-150.8L575.6,-136.1M548.6,-89.9L575.6,-136.1L582.4,-138.2L595.9,-102.5L582.4,-77.4L573.4,-73.2L548.6,-89.9L532.9,-79.5M643.1,124.0L685.8,138.7M663.3,191.1L685.8,138.7L694.8,128.2L739.8,138.7L726.3,157.6L726.3,176.5L672.3,224.7L663.3,220.5L663.3,191.1L649.9,191.1M577.9,-64.8L573.4,-73.2M811.8,281.3L769.1,237.3L778.1,218.4L798.3,222.6L827.5,260.4M366.5,-129.8L402.5,-117.2L398.0,-115.1L371.0,-87.9M359.7,-98.3L350.7,-136.1M733.1,249.9L769.1,237.3M463.2,14.9L494.7,19.1L492.4,40.1L510.4,61.1L476.7,94.7L460.9,71.6L460.9,21.2M517.2,174.4L514.9,170.2M469.9,4.4L499.2,-29.1M528.4,0.3L532.9,10.7L494.7,19.1M323.7,174.4L362.0,136.6L427.2,134.5L463.2,128.2L485.7,163.9L472.2,201.6L449.7,224.7L431.7,226.8L402.5,256.2L398.0,277.2L391.2,296.0L348.5,289.7L328.2,281.3L335.0,231.0L323.7,174.4L290.0,153.4L292.2,147.1L319.2,128.2L319.2,109.3L339.5,88.4L364.2,117.7L382.2,96.7L395.7,52.7M476.7,94.7L460.9,121.9L463.2,128.2M782.6,-268.3L769.1,-243.1L782.6,-226.3M532.9,10.7L568.9,40.1M721.8,459.7L683.6,442.9L636.4,428.2L627.4,436.6L600.4,449.2L616.1,421.9L618.4,394.6L647.6,413.5L667.8,377.8L679.1,369.5L656.6,363.2L654.4,361.1L667.8,340.1L656.6,327.5L647.6,312.8L631.9,287.6L634.1,283.4L658.9,252.0L652.1,224.7L652.1,218.4L663.3,220.5M672.3,224.7L703.8,258.3M706.1,279.3L685.8,273.0L670.1,287.6L692.6,310.7L694.8,331.7L719.6,321.2L730.8,321.2L778.1,325.4L746.6,314.9L784.8,319.1M780.3,369.5L753.3,365.3L751.1,382.0L775.8,386.2M798.3,222.6L807.3,203.7L825.3,193.2L856.8,210.0M398.0,-115.1L422.7,-102.5L442.9,-102.5L449.7,-83.7L474.4,-77.4M402.5,-117.2L418.2,-165.5L467.7,-182.2M476.7,94.7L503.7,117.7L478.9,136.6L460.9,121.9M809.5,96.7L811.8,100.9L843.3,134.5M807.3,203.7L807.3,178.6L764.6,142.9L744.3,140.8M791.5,155.5L809.5,140.8L782.6,119.8L764.6,136.6L791.5,155.5M332.7,-14.4L355.2,-20.7L371.0,-45.9L364.2,-62.7L380.0,-45.9L377.7,4.4L415.9,48.5L395.7,52.7L384.5,27.5L341.7,-1.8L332.7,-14.4L326.0,-12.3M267.5,-85.8L278.7,-98.3L305.7,-60.6L317.0,-18.6L326.0,-12.3L323.7,8.6L290.0,23.3L276.5,27.5L260.8,-37.5L249.5,-45.9L238.3,-85.8L267.5,-85.8L263.0,-92.0M694.8,-54.3L730.8,-64.8L715.1,-71.1L692.6,-100.4M827.5,-1.8L814.0,-14.4L805.0,42.2M719.6,56.9L683.6,21.2L683.6,2.4L667.8,-6.0M276.5,132.4L292.2,147.1M535.1,187.0L553.1,210.0L589.1,247.8L593.6,260.4L591.4,260.4L571.1,291.8L539.6,310.7L535.1,325.4L519.4,329.6L508.2,317.0L481.2,289.7L465.4,247.8L449.7,224.7M652.1,218.4L602.6,220.5L584.6,199.5L553.1,210.0M602.6,220.5L589.1,247.8M258.5,40.1L276.5,27.5M290.0,23.3L326.0,63.2L290.0,86.3M584.6,44.3L604.9,21.2L613.9,-1.8M658.9,0.3L663.3,19.1L649.9,31.7M326.0,63.2L339.5,88.4M883.8,86.3L850.0,82.1L832.0,100.9L811.8,100.9M546.4,761.7L555.4,753.3L586.9,759.6L555.4,770.1L546.4,761.7L530.7,738.7L573.4,738.7L622.9,784.8L622.9,786.9L586.9,759.6M667.8,572.9L631.9,560.3L595.9,512.1L595.9,512.1L640.9,543.6L647.6,558.2L667.8,570.8M600.4,449.2L586.9,403.0L611.6,386.2L616.1,369.5L602.6,359.0L634.1,344.3L656.6,327.5M654.4,361.1L618.4,394.6M656.6,631.7L622.9,617.0L620.6,606.5L622.9,600.2M640.9,585.5L661.1,591.8M647.6,558.2L647.6,543.6L654.4,541.5L681.3,552.0M555.4,770.1L548.6,786.9L530.7,786.9L519.4,772.2L514.9,740.8L528.4,736.6L530.7,738.7M328.2,281.3L281.0,254.1L269.8,233.1L267.5,199.5M548.6,786.9L546.4,824.7L553.1,831.0L573.4,837.2L582.4,898.1L566.6,925.4L566.6,893.9L555.4,862.4L553.1,831.0M478.9,1051.2L478.9,1044.9L460.9,1038.6L478.9,1044.9M83.1,-14.4L134.8,21.2L150.5,82.1L182.0,113.5L209.0,67.4L258.5,40.1L290.0,86.3L269.8,121.9L276.5,132.4L242.8,130.3L195.5,109.3L182.0,113.5L182.0,115.6L152.8,128.2L112.3,159.7L85.3,147.1L69.6,132.4L80.8,100.9L65.1,67.4L74.1,38.0L60.6,6.5L47.1,17.0L4.4,-8.1L-2.4,170.2L-13.6,193.2L-63.1,199.5L-85.6,92.6L-110.3,73.7L-108.1,0.3M472.2,682.0L517.2,663.1L530.7,663.1L532.9,671.5L523.9,675.7L472.2,682.0L445.2,684.1L429.4,675.7L454.2,673.6L492.4,644.3L526.2,640.1L539.6,656.8L530.7,663.1M593.6,260.4L620.6,264.6L652.1,224.7M634.1,283.4L618.4,273.0L598.1,277.2L591.4,260.4M573.4,724.0L575.6,719.8L575.6,715.6L580.1,703.0L589.1,705.1L622.9,715.6L649.9,784.8L636.4,778.5L609.4,730.3L575.6,719.8M377.7,961.0L344.0,950.5L290.0,919.1L292.2,912.8L303.5,919.1L413.7,896.0L431.7,891.8L476.7,856.1L492.4,866.6L496.9,889.7L474.4,896.0L476.7,910.7L440.7,923.3L418.2,921.2L413.7,896.0M519.4,1023.9L512.7,950.5L548.6,937.9L566.6,944.2L604.9,944.2M575.6,1000.9L604.9,944.2L622.9,937.9L629.6,940.0L618.4,984.1L625.1,998.8L575.6,1000.9L568.9,1017.7M631.9,287.6L562.1,317.0L539.6,310.7M496.9,889.7L566.6,925.4L566.6,944.2M512.7,950.5L508.2,952.6L476.7,910.7M463.2,992.5L496.9,961.0L499.2,990.4L476.7,1021.8L460.9,1015.6L458.7,1032.3L422.7,1032.3L400.2,1021.8L395.7,1007.2L438.4,1007.2L463.2,992.5L449.7,971.5L440.7,984.1L418.2,984.1L386.7,996.7L377.7,961.0L440.7,923.3M508.2,952.6L496.9,961.0M2.1,703.0L44.8,711.4L74.1,705.1L101.1,686.2L125.8,625.4L170.8,642.2L209.0,669.4L231.5,679.9L247.3,709.3L245.0,713.5M182.0,736.6L202.3,736.6L245.0,713.5L251.8,721.9L242.8,738.7L233.8,837.2L215.8,841.4L215.8,765.9L184.3,751.2L182.0,736.6L164.0,728.2L134.8,730.3L107.8,755.4L65.1,749.1L38.1,736.6L26.8,761.7L4.4,744.9M-186.8,377.8L-182.3,310.7L-189.1,293.9L-171.1,254.1L-157.6,266.7L-114.8,268.8L-85.6,300.2L-112.6,354.8L-150.8,382.0L-166.6,403.0L-186.8,377.8M746.6,314.9L737.6,312.8L724.1,304.4L719.6,293.9M575.6,715.6L577.9,703.0L580.1,703.0M692.6,310.7L715.1,304.4L715.1,304.4L719.6,321.2M492.4,866.6L537.4,868.7L555.4,862.4M438.4,1065.9L445.2,1055.4L449.7,1078.5M395.7,1007.2L386.7,996.7M395.7,455.5L420.4,457.6L400.2,470.1L395.7,455.5M463.2,419.8L469.9,426.1L487.9,415.6L517.2,424.0L568.9,468.0L584.6,491.1L559.9,533.1L553.1,528.9L546.4,531.0L530.7,552.0L496.9,524.7L469.9,499.5L460.9,463.9L469.9,426.1M616.1,596.0L618.4,589.7L629.6,581.3L640.9,585.5L622.9,600.2L616.1,596.0L613.9,593.9L609.4,575.0L613.9,579.2L618.4,589.7M92.1,216.3L85.3,228.9L98.8,254.1L92.1,277.2L92.1,293.9L24.6,323.3L11.1,344.3L-13.6,352.7L-45.1,396.7L-67.6,377.8L-56.4,359.0L-40.6,363.2L-33.9,348.5L-2.4,306.5L15.6,291.8L15.6,258.3L40.3,239.4L92.1,216.3M528.4,736.6L544.1,724.0L559.9,715.6L573.4,724.0L611.6,744.9L631.9,778.5L622.9,784.8M-78.9,849.8L-58.6,875.0L-54.1,900.2L-31.6,935.8L-15.9,986.2L-20.4,977.8L-69.9,990.4L-105.9,975.7L-162.1,963.1L-195.8,940.0M-2.4,822.6L51.6,849.8L80.8,856.1L89.8,902.3L114.6,906.5L125.8,891.8L173.0,914.9L134.8,956.8L103.3,967.3L112.3,1003.0L134.8,1036.5M60.6,1063.8L20.1,1038.6L-0.1,1021.8L-15.9,986.2M724.1,304.4L715.1,304.4M429.4,675.7L427.2,648.5L449.7,648.5L451.9,629.6L530.7,629.6L530.7,621.2L553.1,625.4L557.6,629.6L546.4,652.6L539.6,656.8M730.8,321.2L737.6,312.8M672.3,1057.5L679.1,1040.7L699.3,1032.3L703.8,996.7L735.3,967.3M757.8,1122.5L744.3,1124.6L708.3,1099.5L683.6,1084.8L672.3,1068.0M-2.4,170.2L26.8,170.2L83.1,155.5M-45.1,396.7L-60.9,415.6L-83.4,440.8L-87.9,463.9M-108.1,457.6L-166.6,403.0M-85.6,300.2L-51.9,283.4L-40.6,226.8L-63.1,199.5L-87.9,193.2L-90.1,157.6L-69.9,168.1L-63.1,199.5M-33.9,501.6L-9.1,453.4L15.6,440.8L47.1,484.8L53.8,510.0L80.8,526.8L44.8,541.5L49.3,554.1L-2.4,541.5M314.7,411.4L305.7,421.9L294.5,382.0L321.5,400.9L314.7,411.4M92.1,277.2L132.6,287.6L139.3,300.2L123.6,321.2L89.8,356.9L56.1,352.7L26.8,367.4L-0.1,390.4L-29.4,438.7L-60.9,415.6M204.5,541.5L236.0,560.3L263.0,552.0L285.5,564.5L373.2,587.6L384.5,610.7L391.2,629.6L389.0,638.0L362.0,633.8L330.5,648.5L303.5,644.3L258.5,612.8L215.8,564.5L184.3,539.4L191.0,537.3M602.6,359.0L591.4,363.2L571.1,327.5L580.1,314.9L647.6,312.8M546.4,652.6L562.1,650.5L564.4,669.4L548.6,673.6L532.9,671.5M125.8,625.4L112.3,598.1L60.6,560.3L85.3,541.5L105.6,541.5L150.5,554.1L184.3,539.4M389.0,638.0L427.2,648.5M445.2,684.1L424.9,703.0L375.5,694.6L362.0,682.0L310.2,677.8L256.3,694.6L247.3,709.3M80.8,856.1L132.6,843.5L215.8,841.4M233.8,837.2L267.5,839.3L285.5,849.8M398.0,839.3L380.0,862.4L321.5,881.3L299.0,877.1L303.5,889.7L292.2,912.8M290.0,919.1L274.3,925.4L263.0,969.4L247.3,954.7L204.5,933.7L200.0,914.9L173.0,914.9M60.6,6.5L83.1,-14.4L60.6,-41.7L51.6,-79.5L11.1,-100.4L13.4,-115.1L40.3,-138.2L105.6,-165.5L164.0,-161.3L177.5,-165.5L231.5,-232.6L251.8,-222.1L265.3,-196.9L267.5,-155.0L260.8,-136.1L267.5,-94.1L263.0,-92.0L218.0,-92.0L182.0,-127.7L164.0,-161.3M665.6,577.1L629.6,564.5L627.4,572.9L618.4,568.7L602.6,556.2M584.6,491.1L600.4,480.6L595.9,512.1M80.8,526.8L114.6,468.0M60.6,560.3L49.3,554.1M656.6,363.2L667.8,377.8M546.4,531.0L550.9,539.4L566.6,572.9L580.1,581.3L577.9,596.0M562.1,587.6L530.7,552.0M362.0,682.0L375.5,728.2L326.0,730.3L251.8,721.9M-0.1,1021.8L-49.6,1034.4L-60.9,1047.0L-216.1,1030.2M353.0,1055.4L341.7,1059.6L368.7,1023.9L400.2,1021.8M460.9,1038.6L445.2,1055.4M148.3,275.1L139.3,300.2M391.2,296.0L404.7,350.6L393.5,377.8L433.9,398.8L440.7,413.5L427.2,449.2L404.7,474.3M303.5,451.3L274.3,413.5L249.5,411.4M182.0,438.7L191.0,400.9L249.5,411.4L240.5,426.1L224.8,489.0L204.5,541.5L191.0,537.3L191.0,476.4L182.0,438.7L150.5,442.9L114.6,468.0L78.6,445.0L65.1,417.7L76.3,371.6L112.3,367.4L137.1,371.6L184.3,407.2L191.0,400.9L191.0,352.7M186.5,323.3L242.8,304.4L265.3,319.1L292.2,354.8L285.5,363.2L233.8,394.6L191.0,352.7L186.5,323.3L184.3,300.2M384.5,610.7L427.2,610.7L445.2,627.5L391.2,629.6M89.8,356.9L76.3,371.6M65.1,417.7L33.6,426.1L15.6,440.8M123.6,321.2L143.8,350.6L137.1,371.6M427.2,826.8L476.7,856.1M132.6,843.5L139.3,822.6L177.5,778.5L184.3,751.2M451.9,629.6L449.7,602.3L465.4,577.1L481.2,598.1L530.7,621.2M398.0,277.2L451.9,283.4L481.2,300.2L485.7,329.6L478.9,319.1L442.9,325.4L411.4,342.2L433.9,398.8M654.4,541.5L652.1,526.8L658.9,531.0L683.6,545.7M652.1,526.8L627.4,507.9L618.4,484.8L643.1,501.6L665.6,520.5L694.8,533.1M692.6,537.3L658.9,531.0M636.4,778.5L631.9,778.5M629.6,581.3L627.4,572.9M557.6,629.6L562.1,650.5M595.9,566.6L598.1,543.6L602.6,556.2L607.1,572.9L595.9,566.6L553.1,528.9M263.0,969.4L281.0,994.6L267.5,996.7L247.3,1030.2L179.8,1038.6M600.4,480.6L611.6,480.6L618.4,484.8M647.6,543.6L640.9,543.6M517.2,424.0L519.4,405.1L541.9,390.4L580.1,384.1L586.9,403.0M600.4,449.2L604.9,461.8L611.6,480.6M485.7,329.6L490.2,346.4L478.9,365.3L463.2,419.8L456.4,434.5L440.7,413.5M294.5,472.2L303.5,451.3L373.2,476.4L404.7,474.3L411.4,501.6L400.2,503.7L406.9,524.7L386.7,522.6L359.7,499.5L344.0,497.4L332.7,478.5L321.5,482.7L294.5,472.2L263.0,524.7L263.0,552.0M548.6,673.6L559.9,694.6L559.9,715.6M544.1,724.0L541.9,700.9L523.9,675.7M559.9,694.6L577.9,703.0M465.4,577.1L465.4,556.2M474.4,539.4L487.9,554.1L508.2,543.6L496.9,524.7M555.4,600.2L562.1,587.6L577.9,596.0L582.4,610.7L555.4,600.2L553.1,625.4M442.9,757.5L467.7,742.8L514.9,740.8M625.1,998.8L627.4,996.7L627.4,1019.7L643.1,1028.1M604.9,1028.1L591.4,1007.2L575.6,1019.7M643.1,501.6L656.6,497.4L679.1,520.5L699.3,524.7M469.9,499.5L458.7,512.1M424.9,531.0L451.9,505.8L458.7,512.1L478.9,531.0L474.4,539.4L465.4,556.2L424.9,531.0L406.9,524.7M712.8,482.7L667.8,474.3L627.4,436.6M656.6,497.4L604.9,461.8M373.2,587.6L386.7,522.6M627.4,996.7L654.4,994.6L647.6,1009.3M550.9,539.4L580.1,581.3M589.1,705.1L591.4,696.7L622.9,715.6M580.1,384.1L591.4,363.2M490.2,346.4L508.2,317.0M535.1,325.4L571.1,327.5M-90.1,157.6L-114.8,174.4L-150.8,174.4L-168.8,163.9L-186.8,138.7L-218.3,126.1M622.9,786.9L598.1,797.4L584.6,835.1L573.4,837.2M584.6,835.1L589.1,849.8L620.6,860.3L647.6,849.8L627.4,902.3L622.9,937.9M647.6,849.8L661.1,854.0L688.1,891.8L706.1,898.1M620.6,606.5L613.9,593.9M389.0,751.2L375.5,728.2M607.1,572.9L609.4,575.0M613.9,579.2L618.4,568.7M218.0,-92.0L211.3,-50.1L188.8,-24.9L146.1,-12.3L134.8,21.2M290.0,153.4L267.5,199.5L242.8,193.2L206.8,130.3L182.0,115.6M281.0,254.1L238.3,245.7L184.3,300.2L148.3,275.1L123.6,233.1L92.1,216.3L96.6,184.9L83.1,155.5L85.3,147.1M708.3,285.5L715.1,304.4M598.1,543.6L607.1,535.2L595.9,512.1","val":"M553.1,528.9L595.9,566.6L607.1,572.9L609.4,575.0L613.9,593.9L620.6,606.5L622.9,617.0L656.6,631.7L661.1,661.0L676.8,661.0L667.8,684.1L656.6,665.2L663.3,709.3L649.9,703.0L647.6,728.2L674.6,824.7L706.1,898.1L688.1,891.8L661.1,854.0L647.6,849.8L620.6,860.3L589.1,849.8L584.6,835.1L598.1,797.4L622.9,786.9L622.9,784.8L631.9,778.5L636.4,778.5L649.9,784.8L622.9,715.6L591.4,696.7L589.1,705.1L580.1,703.0L577.9,703.0L559.9,694.6L548.6,673.6L564.4,669.4L562.1,650.5L557.6,629.6L553.1,625.4L555.4,600.2L582.4,610.7L577.9,596.0L580.1,581.3L550.9,539.4L546.4,531.0L553.1,528.9ZM618.4,568.7L627.4,572.9L629.6,581.3L618.4,589.7L613.9,579.2L618.4,568.7ZM647.6,543.6L647.6,558.2L640.9,543.6L647.6,543.6ZM692.6,537.3L683.6,545.7L658.9,531.0L692.6,537.3Z"};
+const R = [
+ {id:"turia",z:"valencia",n:"Jardín del Turia completo",p:"Parque de Cabecera → Ciudad de las Artes",ll:[39.4797,-0.4094],km:9,d:20,t:"mixto",tipo:"Lineal",lv:1,
+  w:["Parque de Cabecera, Valencia","Puente de las Flores, Valencia","Ciudad de las Artes y las Ciencias, Valencia"],
+  desc:"El clásico, pero de punta a punta: entra por Cabecera y no pares hasta el Gulliver. Volviendo por la otra orilla te salen unos 18 km.",
+  tip:"Hazlo al revés o alterna el anillo de tierra y el carril de asfalto.",q:"Parque de Cabecera Valencia",src:"Ref. Komoot"},
+ {id:"cabecera",z:"valencia",n:"Parque de Cabecera y Bioparc",p:"Campanar · Nou Moles",ll:[39.4780,-0.4120],km:4,d:15,t:"mixto",tipo:"Circular",lv:1,
+  w:["Parque de Cabecera, Valencia","Bioparc Valencia","Parque de Cabecera, Valencia"],
+  desc:"Bucle corto con lago y la pequeña colina del parque. Útil para series o para enlazar con el Parque Fluvial hacia Quart.",
+  tip:"Desde aquí sale el corredor fluvial hacia Mislata y Quart de Poblet.",q:"Parque de Cabecera Valencia"},
+ {id:"playas",z:"valencia",n:"Marina, Malvarrosa y Patacona",p:"La Marina de València",ll:[39.4618,-0.3236],km:10,d:5,t:"asfalto",tipo:"Ida y vuelta",lv:1,
+  w:["La Marina de València","Playa de la Malvarrosa, Valencia","Playa de la Patacona, Alboraya","La Marina de València"],
+  desc:"Paseo marítimo de punta a punta, desde los tinglados de la Marina hasta el final de la Patacona y vuelta.",
+  tip:"Con marea baja vuelve por la arena mojada y trabaja tobillos.",q:"La Marina de Valencia",src:"Ref. CorrerJuntos"},
+ {id:"peixets",z:"valencia",n:"Huerta norte y Ermita dels Peixets",p:"Benimaclet · Alboraya",ll:[39.5040,-0.3330],km:9,d:10,t:"pista",tipo:"Circular",lv:1,
+  w:["Benimaclet, Valencia","Ermita dels Peixets, Alboraya","Port Saplaya, Alboraya","Benimaclet, Valencia"],
+  desc:"Caminos de huerta entre chufas y alquerías hasta la ermita dels Peixets, con vuelta por Port Saplaya. Llano y casi sin tráfico.",
+  tip:"Domingo temprano: caminos vacíos y horchata al terminar.",q:"Ermita dels Peixets Alboraya"},
+ {id:"xurra",z:"valencia",n:"Vía Xurra",p:"Benimaclet → Puçol",ll:[39.4860,-0.3590],km:13,d:30,t:"asfalto",tipo:"Lineal",lv:2,
+  w:["Benimaclet, Valencia","Meliana","Estación de Puçol"],
+  desc:"Antiguo trazado ferroviario convertido en vía verde que cruza la huerta norte hasta Puçol. Tiradas largas sin semáforos.",
+  tip:"Vuelve en metro o Cercanías desde Puçol.",q:"Vía Xurra Valencia"},
+ {id:"devesa",z:"alrededores",n:"Devesa de El Saler",p:"El Saler",ll:[39.3550,-0.3170],km:9,d:20,t:"sendero",tipo:"Circular",lv:2,
+  w:["Gola de Pujol, Valencia","Playa de la Devesa, Valencia","Gola de Pujol, Valencia"],
+  desc:"Senderos de arena compacta entre pinar, dunas y la playa. Pisada blanda y sombra.",
+  tip:"Acaba en la Gola de Pujol, frente al mar.",q:"Devesa del Saler"},
+ {id:"pinedo",z:"alrededores",n:"Pinedo → El Saler por la costa",p:"Pinedo",ll:[39.4200,-0.3330],km:16,d:10,t:"asfalto",tipo:"Ida y vuelta",lv:2,
+  w:["Playa de Pinedo, Valencia","El Saler, Valencia","Playa de Pinedo, Valencia"],
+  desc:"Carril bici-peatonal paralelo a la costa del parque natural de la Albufera. Llano y con viento: entrenamiento de verdad.",
+  tip:"Empieza siempre contra el viento.",q:"Playa de Pinedo Valencia"},
+ {id:"catarroja",z:"alrededores",n:"Port de Catarroja y arrozales",p:"Catarroja",ll:[39.3970,-0.3870],km:9,d:5,t:"pista",tipo:"Circular",lv:1,
+  w:["Catarroja","Port de Catarroja","Catarroja"],
+  desc:"Pistas entre arrozales hasta el puerto de la Albufera. En otoño, con los campos inundados, el paisaje cambia del todo.",
+  tip:"Al atardecer, la luz sobre el lago merece la parada.",q:"Port de Catarroja"},
+ {id:"fluvial",z:"alrededores",n:"Parque Fluvial del Turia",p:"Quart de Poblet → Vilamarxant",ll:[39.4960,-0.4610],km:27,d:130,t:"pista",tipo:"Lineal",lv:2,
+  w:["Quart de Poblet","Manises","Riba-roja de Túria","Vilamarxant"],
+  desc:"Corredor verde junto al río, unos 27 km llanos y señalizados. Elige un tramo y ve rotando.",
+  tip:"Para 10–12 km, el tramo Manises ↔ Pont de la Barca es de los más bonitos.",q:"Parque Fluvial del Turia Manises",src:"Fuente oficial"},
+ {id:"vallesa",z:"alrededores",n:"Bosque de La Vallesa",p:"Paterna",ll:[39.5240,-0.4980],km:3.1,d:40,t:"sendero",tipo:"Circular",lv:1,
+  desc:"Ruta Rosa del Parque Natural del Turia, corta y fácil por el pinar. Enlázala con el río hacia El Clot para unos 14 km.",
+  tip:"Uno de los pocos pinares con sombra a 15 km del centro.",q:"Bosque de la Vallesa Paterna",src:"Fuente oficial"},
+ {id:"palmeral",z:"alrededores",n:"Ruta Azul: El Palmeral",p:"Parque Natural del Turia",ll:[39.5480,-0.5650],km:11.9,d:150,t:"sendero",tipo:"Circular",lv:2,
+  desc:"Circular de dificultad media con construcciones de piedra en seco: aljibes, casetas y muros de cultivo antiguo.",
+  tip:"Buena para pasar del asfalto al trail sin irte lejos.",q:"Parque Natural del Turia Riba-roja",src:"Fuente oficial"},
+ {id:"rodanes",z:"alrededores",n:"Les Rodanes",p:"Vilamarxant",ll:[39.5600,-0.6300],km:8,d:200,t:"sendero",tipo:"Circular",lv:2,
+  desc:"Ruta Amarilla del Parque Natural del Turia: pinar, monte bajo y vistas al valle del Turia.",
+  tip:"Hay variantes y cruces: lleva el track en el móvil.",q:"Les Rodanes Vilamarxant"},
+ {id:"garbi",z:"alrededores",n:"Subida al Garbí",p:"Estivella · Sierra Calderona",ll:[39.6810,-0.3790],km:9,d:450,t:"sendero",tipo:"Ida y vuelta",lv:3,
+  w:["Estivella","Mirador del Garbí","Estivella"],
+  desc:"Trail en la Sierra Calderona hasta el mirador del Garbí, con el Mediterráneo de fondo. Camina las rampas.",
+  tip:"Agua de sobra: arriba no hay nada.",q:"Mirador del Garbí",src:"Fuente oficial"},
+ {id:"portacoeli",z:"alrededores",n:"Porta Coeli y la Calderona",p:"Serra",ll:[39.6870,-0.4800],km:12,d:300,t:"pista",tipo:"Circular",lv:2,
+  desc:"Pistas forestales anchas alrededor de la Cartuja de Porta Coeli. Rodaje de monte sin técnica.",
+  tip:"Más fresco que la costa en verano.",q:"Cartuja de Porta Coeli Serra"},
+ {id:"hondo",z:"cheste",n:"Barranco Hondo · SL-CV 77",p:"Albergue de La Cárcama, Cheste",ll:[39.5170,-0.6990],km:10.2,d:180,t:"sendero",tipo:"Circular",lv:2,
+  desc:"Pistas y sendas por el barranco de la Peña del Pardal, Los Calderones y Los Visos, con vuelta al albergue.",
+  tip:"Homologado y señalizado: difícil perderse.",q:"Albergue de La Cárcama Cheste",src:"Sendero homologado",link:"https://senders.femecv.com/es/sendero/ver/sl-cv-77"},
+ {id:"manga",z:"cheste",n:"Sendero de La Manga · SL-CV 78",p:"Albergue de La Cárcama, Cheste",ll:[39.5180,-0.7010],km:7.4,d:200,t:"sendero",tipo:"Circular",lv:2,
+  desc:"Por la Cuesta del Yesar y la ladera del barranco hasta la casa forestal, el punto más alto, y bajada al mismo cruce.",
+  tip:"Encadénalo con el Barranco Hondo: unos 17 km.",q:"Albergue de La Cárcama Cheste",src:"Sendero homologado",link:"https://senders.femecv.com/es/sendero/ver/sl-cv-78"},
+ {id:"chestellano",z:"cheste",n:"Circular llana de Cheste",p:"Cheste pueblo",ll:[39.4950,-0.6850],km:10.5,d:100,t:"pista",tipo:"Circular",lv:1,
+  desc:"Rodaje fácil por caminos agrícolas alrededor del pueblo, entre viñas y algarrobos.",
+  tip:"Perfecta para el rodaje suave del sábado.",q:"Cheste Valencia",src:"Track Wikiloc",link:"https://es.wikiloc.com/rutas-carrera/cheste-184134207"},
+ {id:"cuchillos",z:"cheste",n:"Los Cuchillos de Cheste",p:"Barranco del Cuchillo",ll:[39.5230,-0.7300],km:8,d:250,t:"sendero",tipo:"Circular",lv:3,
+  desc:"Barranco con paredes de roca y vías de escalada, de los parajes más bonitos del término. Tramos técnicos.",
+  tip:"Para trotar y disfrutar más que para ritmo.",q:"Cuchillos de Cheste"},
+ {id:"chiva",z:"cheste",n:"Sierra de Chiva y la Nevera",p:"Chiva",ll:[39.4720,-0.7450],km:12,d:450,t:"sendero",tipo:"Circular",lv:3,
+  w:["Chiva","Nevera de Chiva","Chiva"],
+  desc:"El Paraje Natural Municipal más grande de la Comunitat. Pistas y sendas hasta la antigua nevera, con algarrobos centenarios.",
+  tip:"El Ayuntamiento publica un PDF con los puntos de la sierra.",q:"Nevera de Chiva",src:"Fuente oficial"},
+ {id:"molinos",z:"cheste",n:"Ruta de los Molinos",p:"Alborache",ll:[39.3920,-0.7750],km:8,d:150,t:"sendero",tipo:"Circular",lv:1,
+  desc:"Ruta asequible junto al agua y los antiguos molinos de Alborache, con sombra y río.",
+  tip:"En verano lleva toalla: hay pozas.",q:"Ruta de los Molinos Alborache"},
+ {id:"turche",z:"cheste",n:"Cueva Turche y Fuente de San Luis",p:"Buñol",ll:[39.4100,-0.7930],km:8,d:250,t:"sendero",tipo:"Circular",lv:2,
+  w:["Buñol","Cueva Turche, Buñol","Buñol"],
+  desc:"Barranco con cascada, la cueva Turche y el paraje de la Fuente de San Luis. Pista y sendero con buen desnivel.",
+  tip:"Tras lluvias la cascada lleva agua.",q:"Cueva Turche Buñol"},
+ {id:"chulilla",z:"cheste",n:"Puentes Colgantes de Chulilla",p:"Chulilla",ll:[39.6540,-0.8930],km:7,d:200,t:"sendero",tipo:"Circular",lv:2,
+  w:["Chulilla","Puentes Colgantes de Chulilla","Chulilla"],
+  desc:"Cañón del Turia, puentes colgantes y senda junto al río. Escapada de fin de semana.",
+  tip:"Sábados y festivos se regula el aparcamiento: llega pronto.",q:"Puentes Colgantes Chulilla"},
+ {id:"vvsegorbe",z:"segorbe",n:"Vía Verde: Segorbe → Jérica",p:"Segorbe · Navajas · Jérica",ll:[39.8500,-0.4900],km:12,d:180,t:"pista",tipo:"Lineal",lv:1,
+  w:["Segorbe","Navajas","Jérica"],
+  desc:"Antiguo trazado del tren minero de Ojos Negros, con pendiente suave remontando el Palancia.",
+  tip:"Subes poco a poco hacia Jérica: la vuelta sale rápida.",q:"Vía Verde Ojos Negros Segorbe",src:"Fuente oficial"},
+ {id:"vvaltura",z:"segorbe",n:"Vía Verde: Segorbe → Altura",p:"Segorbe · Altura",ll:[39.8460,-0.4960],km:5,d:60,t:"pista",tipo:"Ida y vuelta",lv:1,
+  w:["Segorbe","Altura","Segorbe"],
+  desc:"Tramo corto de la vía verde, que pasa por el centro de Altura. 10 km ida y vuelta entre huerta y olivos.",
+  tip:"Desde Altura, la Cartuja de Vall de Crist queda a 20 min a pie.",q:"Vía Verde Ojos Negros Altura",src:"Fuente oficial"},
+ {id:"salto",z:"segorbe",n:"Salto de la Novia y fuentes",p:"Navajas",ll:[39.8740,-0.5110],km:7,d:120,t:"mixto",tipo:"Circular",lv:1,
+  w:["Navajas","Salto de la Novia, Navajas","Navajas"],
+  desc:"Bucle junto al Palancia hasta la cascada más visitada de la zona, pasando por la Fuente del Baño y la de Rafal.",
+  tip:"Llega por la vía verde y vuelve por el río.",q:"Salto de la Novia Navajas"},
+ {id:"cuevasanta",z:"segorbe",n:"Senda a la Cueva Santa · PR-CV 178",p:"Altura",ll:[39.8290,-0.5110],km:9.5,d:500,t:"sendero",tipo:"Lineal",lv:3,
+  w:["Altura","Santuario de la Cueva Santa, Altura"],
+  desc:"Subida por la Masía de Ribas, el barranco de Magaña y pinar de la Calderona hasta el santuario.",
+  tip:"Solo ida. Ida y vuelta son 19 km.",q:"Camino Fuente Sierra 12 Altura",src:"Sendero homologado",link:"https://senders.femecv.com/es/sendero/ver/pr-cv-178"},
+ {id:"regajo",z:"segorbe",n:"Vuelta al pantano del Regajo",p:"Jérica · Navajas",ll:[39.9050,-0.5400],km:8,d:120,t:"pista",tipo:"Circular",lv:2,
+  desc:"Bucle por pistas alrededor del embalse, con el manantial de la Esperanza cerca.",
+  tip:"Mezcla pista y senda de orilla: revisa el track.",q:"Pantano del Regajo"},
+ {id:"cincuenta",z:"segorbe",n:"50 Caños y castillo",p:"Segorbe casco urbano",ll:[39.8520,-0.4880],km:6,d:120,t:"mixto",tipo:"Circular",lv:2,
+  w:["Fuente de los 50 Caños, Segorbe","Castillo de Segorbe","Fuente de los 50 Caños, Segorbe"],
+  desc:"Rodaje urbano con cuestas: la Fuente de los 50 Caños, subida al cerro del castillo y vuelta hacia el Palancia.",
+  tip:"El repecho del castillo sirve para series en cuesta.",q:"Fuente de los 50 Caños Segorbe"}
+];
+const PL={
+ "Valencia centro":[39.4699,-0.3763],"Benimaclet":[39.4860,-0.3590],"Campanar":[39.4810,-0.4010],"Ruzafa":[39.4610,-0.3740],"Malvarrosa":[39.4770,-0.3240],
+ "Cabanyal":[39.4690,-0.3300],"Benicalap":[39.4950,-0.3990],"Patraix":[39.4600,-0.3990],"Burjassot":[39.5100,-0.4130],"Paterna":[39.5030,-0.4400],
+ "Manises":[39.4930,-0.4630],"Quart de Poblet":[39.4810,-0.4400],"Torrent":[39.4370,-0.4650],"Alboraya":[39.5000,-0.3500],"Puçol":[39.6170,-0.3040],
+ "Moncada":[39.5450,-0.3950],"Bétera":[39.5920,-0.4610],"Godella":[39.5210,-0.4120],"Riba-roja de Túria":[39.5470,-0.5660],"Vilamarxant":[39.5690,-0.6220],
+ "L'Eliana":[39.5660,-0.5280],"Llíria":[39.6250,-0.5960],"Catarroja":[39.4030,-0.4030],"El Saler":[39.3820,-0.3310],"Serra":[39.6840,-0.4290],
+ "Náquera":[39.6570,-0.4250],"Sagunto":[39.6800,-0.2780],"Cheste":[39.4950,-0.6850],"Chiva":[39.4670,-0.7190],"Buñol":[39.4190,-0.7900],
+ "Alborache":[39.3920,-0.7720],"Godelleta":[39.4230,-0.6880],"Turís":[39.3900,-0.7110],"Chulilla":[39.6540,-0.8930],"Pedralba":[39.6040,-0.7230],
+ "Segorbe":[39.8510,-0.4880],"Altura":[39.8290,-0.5110],"Navajas":[39.8740,-0.5100],"Jérica":[39.9120,-0.5710],"Soneja":[39.8150,-0.4170],"Castellnovo":[39.8630,-0.4510]
+};
+const LABELS=[["Valencia",[39.4699,-0.3763],1],["Cheste",PL["Cheste"],1],["Segorbe",PL["Segorbe"],1],["Sagunto",PL["Sagunto"],2],["Llíria",PL["Llíria"],2],
+ ["Chiva",PL["Chiva"],2],["Buñol",PL["Buñol"],2],["Chulilla",PL["Chulilla"],2],["Paterna",PL["Paterna"],3],["Torrent",PL["Torrent"],3],["Jérica",PL["Jérica"],3],
+ ["Altura",PL["Altura"],3],["Serra",PL["Serra"],3],["Puçol",PL["Puçol"],3],["Riba-roja",PL["Riba-roja de Túria"],3],["El Saler",PL["El Saler"],3],["Alborache",PL["Alborache"],3]];
+
+const ALB=[[39.357,-0.362],[39.362,-0.338],[39.350,-0.322],[39.330,-0.322],[39.310,-0.333],[39.305,-0.355],[39.318,-0.378],[39.342,-0.380]];
+const GREEN=[
+ {p:[[39.425,-0.326],[39.425,-0.318],[39.30,-0.302],[39.30,-0.312]]},
+ {p:[[39.76,-0.52],[39.75,-0.44],[39.72,-0.36],[39.67,-0.33],[39.64,-0.38],[39.65,-0.47],[39.70,-0.53]]},
+ {p:[[39.56,-0.84],[39.57,-0.76],[39.53,-0.72],[39.49,-0.74],[39.48,-0.81],[39.51,-0.86]]},
+ {p:[[39.58,-0.66],[39.58,-0.60],[39.55,-0.58],[39.54,-0.63]]},
+ {p:[[39.95,-0.48],[39.94,-0.36],[39.89,-0.33],[39.87,-0.42],[39.90,-0.48]]}
+];
+const RIV=[
+ [[39.66,-0.95],[39.654,-0.893],[39.62,-0.78],[39.604,-0.723],[39.569,-0.622],[39.547,-0.566],[39.515,-0.50],[39.497,-0.455],[39.480,-0.415]],
+ [[39.97,-0.63],[39.912,-0.571],[39.874,-0.51],[39.851,-0.488],[39.815,-0.417],[39.75,-0.35],[39.68,-0.278],[39.665,-0.215]]
+];
+const TURIA_G=[[39.4797,-0.4094],[39.4805,-0.392],[39.4785,-0.376],[39.4740,-0.365],[39.4660,-0.357],[39.4560,-0.352]];
+const ROADS=[
+ [[39.470,-0.395],[39.478,-0.44],[39.462,-0.55],[39.490,-0.685],[39.467,-0.719],[39.420,-0.790],[39.40,-0.98]],
+ [[39.490,-0.370],[39.560,-0.330],[39.617,-0.304],[39.680,-0.280],[39.815,-0.417],[39.851,-0.488],[39.912,-0.571],[39.98,-0.64]],
+ [[39.490,-0.400],[39.520,-0.440],[39.566,-0.528],[39.625,-0.596],[39.640,-0.700],[39.654,-0.893]],
+ [[39.450,-0.350],[39.382,-0.331],[39.29,-0.315]]
+];
+const AREAS=[["Mediterráneo",[39.60,-0.255],"sea"],["L'Albufera",[39.333,-0.351],"sea"],["Sierra Calderona",[39.715,-0.44],"park"],["Sierra de Chiva",[39.53,-0.80],"park"],["Sierra de Espadán",[39.905,-0.405],"park"]];
+const poly=pts=>"M"+pts.map(ll=>P(ll).join(",")).join("L")+"Z";
+const pl=pts=>"M"+pts.map(ll=>P(ll).join(",")).join("L");
+
+const PRESETS=[["Valencia","Valencia centro"],["Cheste","Cheste"],["Segorbe","Segorbe"]];
+const Z={valencia:"Valencia ciudad",alrededores:"Alrededores",cheste:"Zona Cheste",segorbe:"Alto Palancia"};
+const ZC={valencia:"var(--z-val)",alrededores:"var(--z-alr)",cheste:"var(--z-che)",segorbe:"var(--z-seg)"};
+const LV=[null,["Fácil","var(--green)"],["Media","var(--orange)"],["Dura","var(--red)"]];
+const TER={asfalto:"Asfalto",pista:"Pista",sendero:"Sendero",mixto:"Mixto"};
+const DIST={todos:"Cualquier distancia",corta:"Menos de 8 km",media:"8 a 14 km",larga:"Más de 14 km"};
+const RAD=[["todos","Todo"],["10","10 km"],["25","25 km"],["50","50 km"]];
+const DEF={zona:"todos",dist:"todos",ter:"todos",rad:"todos",hide:false};
+const st={...DEF,sel:null,view:"home",o:{name:"Valencia centro",ll:PL["Valencia centro"]},pick:false,sugg:null};
+let done={};
+try{done=JSON.parse(localStorage.getItem("rr-done")||"{}")}catch(e){done={}}
+try{const o=JSON.parse(localStorage.getItem("rr-origin")||"null");if(o&&o.ll)st.o=o}catch(e){}
+const save=()=>{try{localStorage.setItem("rr-done",JSON.stringify(done));localStorage.setItem("rr-origin",JSON.stringify(st.o))}catch(e){}};
+const $=id=>document.getElementById(id);
+const I={
+ run:'<svg class="i" viewBox="0 0 24 24"><circle cx="14" cy="4.5" r="1.8" fill="currentColor" stroke="none"/><path d="M8 21l3-6 3 2 1 5M7 11l3-3 4 1 2 3 3 1M11 15l1.5-5.5"/></svg>',
+ route:'<svg class="i" viewBox="0 0 24 24"><circle cx="6" cy="19" r="2"/><circle cx="18" cy="5" r="2"/><path d="M8 19h8a3.5 3.5 0 0 0 0-7H8a3.5 3.5 0 0 1 0-7h8"/></svg>',
+ car:'<svg class="i" viewBox="0 0 24 24"><path d="M5 17h14v-5l-2-5H7l-2 5zM5 17v2M19 17v2M5 12h14"/></svg>',
+ ext:'<svg class="i" viewBox="0 0 24 24"><path d="M14 3h7v7M10 14 21 3M21 14v7H3V3h7"/></svg>',
+ pin:'<svg class="i" viewBox="0 0 24 24"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>',
+ check:'<svg class="i" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>',
+ tip:'<svg class="i" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg>',
+ shuffle:'<svg class="i" viewBox="0 0 24 24"><path d="M16 3h5v5M4 20 21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>',
+ chev:'<svg class="i chev" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg>',
+ x:'<svg class="i" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>',
+ down:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>'
+};
+function hav(a,b){const r=Math.PI/180,dl=(b[0]-a[0])*r,dn=(b[1]-a[1])*r;const h=Math.sin(dl/2)**2+Math.cos(a[0]*r)*Math.cos(b[0]*r)*Math.sin(dn/2)**2;return 12742*Math.asin(Math.sqrt(h))}
+const away=r=>hav(st.o.ll,r.ll);
+const fmt=n=>String(n).replace(".",",");
+const fkm=a=>a<1?"< 1":fmt(a.toFixed(a<10?1:0));
+const llStr=ll=>ll[0].toFixed(5)+","+ll[1].toFixed(5);
+const enc=encodeURIComponent;
+const shortName=n=>n.replace(" centro","");
+const byId=id=>R.find(r=>r.id===id);
+function routeUrl(r){
+  if(r.w&&r.w.length>1){const o=r.w[0],d=r.w[r.w.length-1],mid=r.w.slice(1,-1);
+    return "https://www.google.com/maps/dir/?api=1&travelmode=walking&origin="+enc(o)+"&destination="+enc(d)+(mid.length?"&waypoints="+enc(mid.join("|")):"")}
+  return "https://www.google.com/maps/@?api=1&map_action=map&basemap=terrain&zoom=14&center="+llStr(r.ll);
+}
+const driveUrl=r=>"https://www.google.com/maps/dir/?api=1&travelmode=driving&origin="+llStr(st.o.ll)+"&destination="+enc(r.q);
+const trackUrl=r=>r.link||("https://www.google.com/search?q="+enc("wikiloc correr "+r.n+" "+r.p));
+function distOk(k){return st.dist==="todos"||(st.dist==="corta"&&k<8)||(st.dist==="media"&&k>=8&&k<=14)||(st.dist==="larga"&&k>14)}
+function list(){return R.filter(r=>(st.zona==="todos"||r.z===st.zona)&&distOk(r.km)&&(st.ter==="todos"||r.t===st.ter)
+  &&(st.rad==="todos"||away(r)<=+st.rad)&&!(st.hide&&done[r.id])).sort((a,b)=>away(a)-away(b))}
+const allSorted=()=>[...R].sort((a,b)=>away(a)-away(b));
+
+/* ---------- Map engine ---------- */
+const P=ll=>[(ll[1]-MAP.B.w)*MAP.K*MAP.sc,(MAP.B.n-ll[0])*MAP.sc];
+const U=(x,y)=>[MAP.B.n-y/MAP.sc,MAP.B.w+x/(MAP.K*MAP.sc)];
+const kmPx=MAP.sc/111;
+function fitBox(el,pts,pad=1.35,minW=170){
+  const r=el.getBoundingClientRect(),a=r.width&&r.height?r.width/r.height:1.3;
+  const xy=pts.map(P),xs=xy.map(p=>p[0]),ys=xy.map(p=>p[1]);
+  const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
+  let w=Math.max((x1-x0)*pad,minW),h=Math.max((y1-y0)*pad,minW);if(w/h<a)w=h*a;else h=w/a;
+  return {x:(x0+x1)/2-w/2,y:(y0+y1)/2-h/2,w,h};
+}
+function drawMap(el,vb,opt={}){
+  const br=el.getBoundingClientRect(),k=br.width?Math.max(vb.w/br.width,vb.h/br.height):1;
+  const vis=opt.vis||list(),ids=new Set(vis.map(r=>r.id)),o=P(st.o.ll);
+  el.setAttribute("viewBox",`${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
+  let s=`<rect x="${vb.x-10}" y="${vb.y-10}" width="${vb.w+20}" height="${vb.h+20}" fill="var(--sea)"/>`;
+  s+=`<path d="${MAP.land}" fill="var(--land)" stroke="var(--land-line)" stroke-width="${.6*k}"/>`;
+  s+=`<path d="${MAP.mesh}" fill="none" stroke="var(--land-line)" stroke-width="${.5*k}" stroke-opacity="${k<.35?.9:.35}"/>`;
+  GREEN.forEach(g=>{s+=`<path d="${poly(g.p)}" fill="var(--park)"/>`});
+  if(MAP.val)s+=`<path d="${MAP.val}" fill="var(--city)"/>`;
+  s+=`<path d="${poly(ALB)}" fill="var(--sea)" stroke="var(--water-line)" stroke-width="${.8*k}"/>`;
+  RIV.forEach(r=>{s+=`<path d="${pl(r)}" fill="none" stroke="var(--river)" stroke-width="${2.2*k}" stroke-linecap="round" stroke-linejoin="round"/>`});
+  s+=`<path d="${pl(TURIA_G)}" fill="none" stroke="var(--park-strong)" stroke-width="${5*k}" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".85"/>`;
+  ROADS.forEach(r=>{s+=`<path d="${pl(r)}" fill="none" stroke="var(--road-case)" stroke-width="${4.2*k}" stroke-linecap="round" stroke-linejoin="round"/><path d="${pl(r)}" fill="none" stroke="var(--road)" stroke-width="${2.6*k}" stroke-linecap="round" stroke-linejoin="round"/>`});
+  if(!opt.mini)AREAS.forEach(([n,ll,it])=>{const p=P(ll);s+=`<text x="${p[0]}" y="${p[1]}" text-anchor="middle" font-size="${(it==="sea"?13:11)*k}" font-style="italic" font-weight="500" fill="${it==="sea"?"var(--water-label)":"var(--park-label)"}" letter-spacing="${it==="sea"?2*k:0}" font-family="var(--font)" pointer-events="none">${n}</text>`});
+  if(!opt.mini)[10,25,50].forEach(r=>{const rr=r*kmPx;s+=`<circle cx="${o[0]}" cy="${o[1]}" r="${rr}" fill="none" stroke="var(--tint)" stroke-opacity="${st.rad===String(r)?.6:.22}" stroke-width="${(st.rad===String(r)?1.6:1)*k}" stroke-dasharray="${4*k} ${4*k}"/>
+    <text x="${o[0]}" y="${o[1]-rr-4*k}" text-anchor="middle" font-size="${10*k}" font-weight="600" fill="var(--tint)" fill-opacity=".8" font-family="var(--font)">${r} km</text>`});
+  const lvl=k<.35?3:k<.65?2:1;
+  LABELS.filter(l=>l[2]<=(opt.mini?1:lvl)).forEach(([n,ll,imp])=>{const p=P(ll);
+    s+=`<text x="${p[0]}" y="${p[1]+(imp===1?17:14)*k}" text-anchor="middle" font-size="${(imp===1?13:11)*k}" font-weight="${imp===1?700:600}" fill="var(--map-label)" stroke="var(--land)" stroke-width="${3*k}" paint-order="stroke" font-family="var(--font)" pointer-events="none">${n}</text>`});
+  const order=[...R].sort((a,b)=>(ids.has(a.id)-ids.has(b.id))||((a.id===st.sel)-(b.id===st.sel)));
+  order.forEach(r=>{const p=P(r.ll),on=ids.has(r.id),sel=!opt.mini&&st.sel===r.id,rad=(sel?10:on?(opt.mini?5:7):4)*k;
+    s+=`<g class="pin" data-id="${r.id}" style="cursor:pointer">${sel?`<circle cx="${p[0]}" cy="${p[1]}" r="${16*k}" fill="${ZC[r.z]}" fill-opacity=".22"/>`:""}
+      <circle cx="${p[0]}" cy="${p[1]}" r="${rad}" fill="${on?ZC[r.z]:"var(--label-3)"}" fill-opacity="${on?1:.6}" stroke="#fff" stroke-width="${(on?2:1.2)*k}"/>
+      ${done[r.id]&&on&&!opt.mini?`<path d="M${p[0]-3*k} ${p[1]} l${2*k} ${2.2*k} l${4*k} -${4.4*k}" fill="none" stroke="#fff" stroke-width="${1.6*k}" stroke-linecap="round" stroke-linejoin="round"/>`:""}
+      <title>${r.n} · ${fmt(r.km)} km</title></g>`});
+  s+=`<g pointer-events="none"><circle cx="${o[0]}" cy="${o[1]}" r="${18*k}" fill="var(--tint)" fill-opacity=".16"/><circle cx="${o[0]}" cy="${o[1]}" r="${7*k}" fill="var(--tint)" stroke="#fff" stroke-width="${2.5*k}"/></g>`;
+  el.innerHTML=s;
+}
+
+/* ---------- Full map interactions ---------- */
+const svg=$("map");let vb={x:0,y:0,w:MAP.W,h:MAP.H};
+function redraw(){drawMap(svg,vb)}
+function zoomTo(f){const r=svg.getBoundingClientRect(),a=r.width/r.height||1.3;let w=Math.max(60,Math.min(vb.w*f,MAP.W*1.6));const cx=vb.x+vb.w/2,cy=vb.y+vb.h/2;vb={x:cx-w/2,y:cy-w/a/2,w,h:w/a};redraw()}
+function fitVisible(){vb=fitBox(svg,[st.o.ll,...list().map(r=>r.ll)]);redraw()}
+let drag=null;
+svg.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY,vx:vb.x,vy:vb.y,moved:false};svg.setPointerCapture(e.pointerId)});
+svg.addEventListener("pointermove",e=>{if(!drag)return;const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+  if(Math.abs(dx)+Math.abs(dy)>5){drag.moved=true;svg.classList.add("drag")}
+  if(drag.moved){const r=svg.getBoundingClientRect(),s=Math.max(vb.w/r.width,vb.h/r.height);vb.x=drag.vx-dx*s;vb.y=drag.vy-dy*s;svg.setAttribute("viewBox",`${vb.x} ${vb.y} ${vb.w} ${vb.h}`)}});
+svg.addEventListener("pointerup",e=>{const d=drag;drag=null;svg.classList.remove("drag");if(!d)return;if(d.moved){redraw();return}
+  if(st.pick){const pt=svg.createSVGPoint();pt.x=e.clientX;pt.y=e.clientY;const m=pt.matrixTransform(svg.getScreenCTM().inverse());
+    st.pick=false;$("pickhint").hidden=true;svg.classList.remove("pickmode");setOrigin("Punto del mapa",U(m.x,m.y));return}
+  const pin=document.elementFromPoint(e.clientX,e.clientY)?.closest(".pin");
+  if(pin)mapSelect(pin.dataset.id);else{st.sel=null;sheet();redraw()}});
+svg.addEventListener("wheel",e=>{e.preventDefault();zoomTo(e.deltaY>0?1.15:1/1.15)},{passive:false});
+$("zin").onclick=()=>zoomTo(1/1.5);$("zout").onclick=()=>zoomTo(1.5);$("fit").onclick=fitVisible;
+$("legend").innerHTML=Object.entries(Z).map(([k,l])=>`<span><i style="background:${ZC[k]}"></i>${l}</span>`).join("");
+function mapSelect(id){st.sel=id;const r=byId(id);vb=fitBox(svg,[st.o.ll,r.ll],1.6,260);sheet();redraw()}
+function sheet(){const el=$("sheet"),r=st.sel&&byId(st.sel);if(!r){el.hidden=true;return}
+  el.hidden=false;el.innerHTML=`<div class="top"><span class="ic" style="background:${ZC[r.z]}">${I.run}</span>
+   <div class="rt"><b>${r.n}</b><small>${fmt(r.km)} km · +${r.d} m · ${LV[r.lv][0]} · a ${fkm(away(r))} km</small></div>
+   <button class="x" id="shx" aria-label="Cerrar">${I.x}</button></div>
+   <div class="btnrow"><a class="pill tint" href="${routeUrl(r)}" target="_blank" rel="noopener">${I.route}Ver en Maps</a>
+   <button class="pill soft" id="shd">Detalles</button></div>`;
+  $("shx").onclick=()=>{st.sel=null;sheet();redraw()};
+  $("shd").onclick=()=>openRoute(r.id);
+}
+
+/* ---------- Views ---------- */
+function go(v){st.view=v;["home","list","map"].forEach(x=>$("v-"+x).hidden=x!==v);window.scrollTo(0,0);render();
+  if(v==="map")requestAnimationFrame(()=>{if(st.sel)mapSelect(st.sel);else fitVisible()})}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-go]");if(b){e.preventDefault();if(b.dataset.zone){Object.assign(st,{...DEF,rad:st.rad,zona:b.dataset.zone})}if(b.dataset.go!=="map")st.sel=b.dataset.go==="list"?st.sel:null;go(b.dataset.go)}});
+$("miniwrap").onclick=()=>go("map");$("miniwrap").onkeydown=e=>{if(e.key==="Enter")go("map")};
+function openRoute(id){Object.assign(st,{...DEF});const r=byId(id);st.sel=id;go("list");requestAnimationFrame(()=>$("r-"+id)?.scrollIntoView({behavior:"smooth",block:"start"}))}
+
+/* ---------- Home ---------- */
+function pickSugg(){const L=allSorted().filter(r=>!done[r.id]);const pool=(L.length?L:allSorted()).slice(0,6);
+  let r;do{r=pool[Math.floor(Math.random()*pool.length)]}while(pool.length>1&&r.id===st.sugg);st.sugg=r.id}
+function renderHome(){
+  $("hereName").textContent=shortName(st.o.name);
+  seg("presets",PRESETS.map(([l,k])=>[k,l]),st.o.name,k=>setOrigin(k,PL[k]));
+  if(!st.sugg||!byId(st.sugg))pickSugg();
+  const r=byId(st.sugg);
+  $("sugg").innerHTML=`<div class="th"><h3>${I.run}Tu próxima ruta</h3><button class="more" id="shuf">${I.shuffle}Otra</button></div>
+   <div style="display:flex;gap:12px;align-items:flex-start"><span class="ic" style="background:${ZC[r.z]}">${I.run}</span>
+   <div style="min-width:0"><h2>${r.n}</h2><p class="sub2">${r.p} · a ${fkm(away(r))} km de ti</p></div></div>
+   <div class="chipsrow"><span class="mchip">${fmt(r.km)} km</span><span class="mchip">+${r.d} m</span><span class="mchip" style="color:${LV[r.lv][1]}">${LV[r.lv][0]}</span><span class="mchip">${TER[r.t]}</span></div>
+   <div class="btnrow"><a class="pill tint" href="${routeUrl(r)}" target="_blank" rel="noopener">${I.route}Ver en Maps</a><button class="pill soft" id="suggd">Detalles</button></div>`;
+  $("shuf").onclick=()=>{pickSugg();renderHome()};$("suggd").onclick=()=>openRoute(r.id);
+  // progress
+  const nd=Object.keys(done).length,pct=nd/R.length,C=2*Math.PI*30;
+  $("ring").innerHTML=`<circle cx="36" cy="36" r="30" fill="none" stroke="var(--fill)" stroke-width="9"/>
+   ${nd?`<circle cx="36" cy="36" r="30" fill="none" stroke="var(--green)" stroke-width="9" stroke-linecap="round" stroke-dasharray="${C*pct} ${C}" transform="rotate(-90 36 36)"/>`:""}
+   <text x="36" y="41" text-anchor="middle" font-size="14" font-weight="700" fill="var(--label)" font-family="var(--font)">${Math.round(pct*100)}%</text>`;
+  $("doneN").textContent=nd;$("doneOf").textContent="de "+R.length+" rutas";
+  const km=Object.keys(done).reduce((s,id)=>s+(byId(id)?.km||0),0);
+  $("doneKm").textContent=nd?fmt(km.toFixed(1))+" km de rutas nuevas":"Marca las que corras para ver tu progreso";
+  // near
+  const near=[10,25,50].map(x=>[x,R.filter(r=>away(r)<=x).length]);
+  $("near").innerHTML=near.map(([x,n])=>`<div class="bar"><span>${x} km</span><span class="tr"><i style="width:${n/R.length*100}%;background:var(--tint)"></i></span><b>${n}</b></div>`).join("")+
+   `<p class="sub2" style="margin-top:2px">rutas en cada radio</p>`;
+  // zones
+  $("zones").innerHTML=Object.entries(Z).map(([z,l])=>{const rs=R.filter(r=>r.z===z),cl=Math.min(...rs.map(away)),dn=rs.filter(r=>done[r.id]).length;
+   return `<button class="zrow" data-go="list" data-zone="${z}"><span class="zi" style="background:${ZC[z]}">${rs.length}</span>
+    <span class="t"><b>${l}</b><small>La más cercana a ${fkm(cl)} km · ${dn} hecha${dn===1?"":"s"}</small></span>${I.chev}</button>`}).join("");
+  // closest
+  $("closest").innerHTML=allSorted().slice(0,4).map(r=>`<li class="row"><button class="rowbtn" data-open="${r.id}">
+    <span class="ic" style="background:${ZC[r.z]}">${I.run}${done[r.id]?`<span class="ok">${I.check}</span>`:""}</span>
+    <span class="rt"><b>${r.n}</b><small>${fmt(r.km)} km · +${r.d} m · ${LV[r.lv][0]}</small></span>
+    <span class="trail"><b>${fkm(away(r))} km</b><small>de ti</small></span>${I.chev}</button></li>`).join("");
+  document.querySelectorAll("[data-open]").forEach(b=>b.onclick=()=>openRoute(b.dataset.open));
+  $("allbtn").innerHTML="Ver las "+R.length+" rutas"+I.chev;
+  requestAnimationFrame(()=>{const m=$("mini");drawMap(m,fitBox(m,[st.o.ll,...allSorted().slice(0,12).map(r=>r.ll)],1.25),{mini:true,vis:R})});
+}
+
+/* ---------- List ---------- */
+function seg(el,items,cur,on){const b=$(el);b.innerHTML="";items.forEach(([v,l])=>{const x=document.createElement("button");x.textContent=l;x.setAttribute("aria-pressed",cur===v);x.onclick=()=>on(v);b.appendChild(x)})}
+function filters(){
+  const sel=(key,opts,lab)=>`<label class="selpill${st[key]!=="todos"?" on":""}"><select data-k="${key}" aria-label="${lab}">${Object.entries(opts).map(([v,l])=>`<option value="${v}"${st[key]===v?" selected":""}>${l}</option>`).join("")}</select>${I.down}</label>`;
+  $("filterbar").innerHTML=sel("zona",{todos:"Todas las zonas",...Z},"Zona")+sel("dist",DIST,"Distancia")+sel("ter",{todos:"Cualquier terreno",...TER},"Terreno")+
+    `<button class="tpill" id="hide" aria-pressed="${st.hide}">Ocultar hechas</button>`+
+    (["zona","dist","ter"].some(k=>st[k]!=="todos")||st.hide?`<button class="tpill" id="reset" style="color:var(--tint)">Restablecer</button>`:"");
+  $("filterbar").querySelectorAll("select").forEach(s=>s.onchange=()=>{st[s.dataset.k]=s.value;st.sel=null;render()});
+  $("hide").onclick=()=>{st.hide=!st.hide;render()};
+  $("reset")&&($("reset").onclick=()=>{Object.assign(st,{...DEF,rad:st.rad});render()});
+}
+function row(r){
+  const lv=LV[r.lv],d=done[r.id],open=st.sel===r.id;
+  return `<li class="row" id="r-${r.id}"><button class="rowbtn" data-id="${r.id}" aria-expanded="${open}">
+    <span class="ic" style="background:${ZC[r.z]}">${I.run}${d?`<span class="ok">${I.check}</span>`:""}</span>
+    <span class="rt"><b>${r.n}</b><small>${fmt(r.km)} km · +${r.d} m · ${lv[0]}</small></span>
+    <span class="trail"><b>${fkm(away(r))} km</b><small>de ti</small></span>${I.chev}</button>
+   ${open?`<div class="detail">
+    <div class="place"><span class="badge" style="background:color-mix(in srgb,${ZC[r.z]} 16%,transparent);color:${ZC[r.z]}">${Z[r.z]}</span>${r.p}</div>
+    <div class="stats"><div class="stat"><small>Distancia</small><b>${fmt(r.km)}<span>km</span></b></div>
+     <div class="stat"><small>Desnivel</small><b>${r.d}<span>m</span></b></div>
+     <div class="stat"><small>Tipo</small><b style="font-size:15px;padding-top:3px">${r.tipo}</b></div></div>
+    <p class="desc">${r.desc}</p><p class="tip">${I.tip}<span>${r.tip}</span></p>
+    <a class="pill tint block" href="${routeUrl(r)}" target="_blank" rel="noopener">${I.route}${r.w?"Ver recorrido en Google Maps":"Ver zona en Google Maps"}</a>
+    <div class="acts2">
+     <a class="pill soft" href="${driveUrl(r)}" target="_blank" rel="noopener">${I.car}Cómo llegar</a>
+     <a class="pill soft" href="${trackUrl(r)}" target="_blank" rel="noopener">${I.ext}${r.link?"Ficha":"Track"}</a>
+     <button class="pill soft" data-onmap="${r.id}">${I.pin}En el mapa</button>
+     <button class="pill ${d?"done-on":"soft"}" data-done="${r.id}">${I.check}${d?"Hecha "+d.f.split("-").reverse().slice(0,2).join("/"):"Hecha"}</button>
+    </div>
+    <span class="src">${TER[r.t]} · Nivel ${lv[0].toLowerCase()}${r.src?" · "+r.src:""}</span></div>`:""}</li>`;
+}
+function renderList(){
+  $("listSub").textContent="Desde "+shortName(st.o.name);
+  seg("f-rad",RAD,st.rad,v=>{st.rad=v;st.sel=null;render()});filters();
+  const L=list();
+  $("list").innerHTML=L.length?L.map(row).join(""):`<li class="empty">Ninguna ruta con estos filtros.<br>Amplía el radio o restablece los filtros.</li>`;
+  $("count").textContent=L.length+" ruta"+(L.length===1?"":"s")+" · más cercanas primero";
+  $("doneCount").textContent=Object.keys(done).length+" de "+R.length+" corridas";
+  document.querySelectorAll("#list .rowbtn").forEach(b=>b.onclick=()=>{st.sel=st.sel===b.dataset.id?null:b.dataset.id;renderList()});
+  document.querySelectorAll("[data-done]").forEach(b=>b.onclick=()=>{const id=b.dataset.done;if(done[id])delete done[id];else done[id]={f:new Date().toISOString().slice(0,10)};save();renderList()});
+  document.querySelectorAll("[data-onmap]").forEach(b=>b.onclick=()=>{st.sel=b.dataset.onmap;go("map")});
+}
+function render(){if(st.view==="home")renderHome();else if(st.view==="list")renderList();else{sheet();redraw()}}
+
+/* ---------- Origin ---------- */
+function setOrigin(name,ll,err){
+  const m=$("msg");
+  if(err){m.textContent=err;m.className="msg err";m.hidden=false;if(st.view!=="home")go("home");return}
+  st.o={name,ll};st.sel=null;st.sugg=null;save();m.hidden=true;
+  if(st.view==="map")fitVisible();render();
+}
+function parse(txt){const t=txt.trim();if(!t)return null;
+  const m=t.match(/@(-?\d+\.\d+),(-?\d+\.\d+)/)||t.match(/[?&](?:q|query|ll|destination|center)=(-?\d+\.\d+)(?:,|%2C)\s*(-?\d+\.\d+)/)||t.match(/^(-?\d{1,2}\.\d+)\s*[,; ]\s*(-?\d{1,3}\.\d+)$/);
+  if(m)return{name:"Coordenadas",ll:[+m[1],+m[2]]};
+  const norm=s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"");
+  const k=Object.keys(PL).find(n=>norm(n)===norm(t))||Object.keys(PL).find(n=>norm(n).includes(norm(t)));
+  return k?{name:k,ll:PL[k]}:null}
+function doSearch(){const v=$("q").value,r=parse(v);if(r){setOrigin(r.name,r.ll);$("q").value=""}
+  else setOrigin(null,null,"No encuentro «"+v+"». Prueba con un pueblo de la lista, unas coordenadas o un enlace de Google Maps.")}
+$("go").onclick=doSearch;$("q").addEventListener("keydown",e=>{if(e.key==="Enter")doSearch()});
+$("places").innerHTML=Object.keys(PL).map(n=>`<option value="${n}">`).join("");
+$("gps").onclick=()=>{const fail="Este visor no permite usar el GPS. En Google Maps, mantén pulsado tu posición, copia las coordenadas y pégalas en el buscador.";
+  if(!navigator.geolocation){setOrigin(null,null,fail);return}
+  navigator.geolocation.getCurrentPosition(p=>setOrigin("Tu ubicación",[p.coords.latitude,p.coords.longitude]),()=>setOrigin(null,null,fail),{timeout:8000})};
+$("pickbtn").onclick=()=>{go("map");st.pick=true;$("pickhint").hidden=false;svg.classList.add("pickmode")};
+window.addEventListener("resize",()=>{if(st.view==="map")redraw();else if(st.view==="home")renderHome()});
+requestAnimationFrame(()=>render());
+</script>
+
+</body>
+</html>
